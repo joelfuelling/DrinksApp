@@ -19,7 +19,18 @@ const mongoose = require('mongoose')
 //             https://github.com/takis-fuego-cohort/lessons-and-labs/blob/main/Unit_2/project_2/guide-to-user-centric-crud.md
 //     One-To-One Relationship
 //     One-To-Many Relationship
-
+const reviewSchema = new mongoose.Schema({
+    content: {
+        type: String,
+        required: true
+    },
+    rating: {
+        type: Number,
+        min: 1,
+        max: 5,
+        required: true
+    }
+})
 
 
 const userSchema = new mongoose.Schema({
@@ -53,9 +64,6 @@ const drinkSchema = new mongoose.Schema({
         enum: ['Beer', 'Wine', 'Spirits', 'Other'], default: 'Select',
         required: true
     },
-    percent: { 
-        type: Number, 
-    },
     abv: {
         type: Number,
     },
@@ -63,7 +71,7 @@ const drinkSchema = new mongoose.Schema({
         type: Array, // or String? Not sure...
         required: false 
     },
-    user: [userSchema] // Does this make sense to put here? Based off the movie/review example I don't think it would because a drink isn't going to have user information on it. They're very different categories, would we want to separate them? If so, can we/how would we?
+    reviews: [reviewSchema] // Does this make sense to put here? Based off the movie/review example I don't think it would because a drink isn't going to have user information on it. They're very different categories, would we want to separate them? If so, can we/how would we?
 });
 
 const Drink = mongoose.model('Drink', drinkSchema);
