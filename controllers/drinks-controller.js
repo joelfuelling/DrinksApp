@@ -15,11 +15,6 @@ const drinksController = {
     },
     create: async (req, res) => {
         try{
-            if(req.body.nowShowing === "on"){
-                req.body.nowShowing = true
-            }else{
-                req.body.nowShowing = false
-            }
             const newdrink = await Drink.create(req.body)
             res.redirect(`/drinks/${newdrink._id}`)
         }catch(err){
