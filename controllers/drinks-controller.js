@@ -1,5 +1,5 @@
 const Drink = require('../models/drink')
-const Performer = require('../models/performer')
+const Review = require('../models/review')
 
 const drinksController = {
     index: async (req, res)=>{
@@ -15,7 +15,7 @@ const drinksController = {
     },
     create: async (req, res) => {
         try{
-            const newdrink = await Drink.create(req.body)
+            const newDrink = await Drink.create(req.body)
             res.redirect(`/drinks/${newdrink._id}`)
         }catch(err){
             console.log(err);
@@ -25,18 +25,17 @@ const drinksController = {
     show: async (req, res) => {
         // get the drink from the db
         const drink = await Drink.findById(req.params.id)
-                                 .populate('cast')
-        // get all performers so we can populate the dropdown
-        const performers = await Performer.find();
+        // get all drinks so we can populate the dropdown
+        const reviews = await Review.find();
         // send it to the template
         res.render('drinks/show', {
             drink: drink,
-            performers
+            reviews
         })
     },
     delete: async (req, res) => {
         try{
-            const recentlyDeletedrink = await Drink.findByIdAndDelete(req.params.id)
+            const recentlyDeletedDrink = await Drink.findByIdAndDelete(req.params.id)
             res.redirect('/drinks')
         }catch(err){
             res.send(err)
@@ -55,12 +54,6 @@ const drinksController = {
         }
     },
     update: async (req, res) => {
-        try{
-            if(req.body.nowShowing === "on"){
-                req.body.nowShowing = true
-            }else{
-                req.body.nowShowing = false
-            }
             // send req.body to the model for updating
             await Drink.findByIdAndUpdate(req.params.id, req.body)
             res.redirect(`/drinks/${req.params.id}`)
@@ -68,15 +61,15 @@ const drinksController = {
             res.send(err)
         }
     },
-    addPerformer: async (req, res) => {
+    addReview: async (req, res) => {
         try{
-            if(!req.body.performerId){
-                throw new Error("must have performer id")
+            if(!req.body.drinkId){
+                throw new Error("must have drink id")
             }
-            // grab the drink we are adding the performer to
+            // grab the drink we are adding the review to
             const drink = await Drink.findById(req.params.id)
-            // add the performerId to the array of ids in drink
-            drink.cast.push(req.body.performerId) 
+            // add the drinkId to the array of ids in drink
+            drink.cast.push(req.body.drinkId) // This is reference strategy for many-to-many which we won't need since we're doing the embedded approach.
             // save the drink
             await drink.save()
             // redirect to the show page
