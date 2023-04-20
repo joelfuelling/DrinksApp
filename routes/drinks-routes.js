@@ -16,6 +16,6 @@ router.get('/:id/edit', drinksController.edit)
 
 router.put('/:id', drinksController.update)
 
-router.post('/:id/performers', drinksController.addPerformer)
+router.post('/:id/drinks', drinksController.addDrink)
 
 module.exports = router;
