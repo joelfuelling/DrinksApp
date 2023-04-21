@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrewVine</title>
+</head>
+<body>
+    <%- include('../partials/_navbar') %>
+    <h1>Add it to the Fridge</h1>
+    <form action="/drinks" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" name="name">
+        <br>
+        <label for="type">type:</label>
+        <select name="type">
+            <option value="Beer">Beer</option>
+            <option value="Wine">Wine</option>
+            <option value="Spirits">Spirits</option>
+            <option value="Other">Other</option>
+        </select>
+        <br>
+        <label for="style">Style:</label>
+        <input type="text" name="style">
+        <br>
+        <label for="abv">ABV%:</label>
+        <input type="number" name="abv">
+        <br>
+        <label for="location">Location</label>
+        <input type="text" name="location">
+        <br>
+        <label for="description">Description</label>
+        <textarea name="description" ></textarea>
+        <br>
+        <input type="submit" value="Add to BrewVine">
+    </form>
+</body>
+</html>

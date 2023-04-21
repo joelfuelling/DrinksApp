@@ -64,13 +64,22 @@ const drinkSchema = new mongoose.Schema({
         enum: ['Beer', 'Wine', 'Spirits', 'Other'], default: 'Select',
         required: true
     },
+    style: {
+        type: String,
+    },
     abv: {
         type: Number,
     },
-    wishlist: {
-        type: Array, // or String? Not sure...
-        required: false 
+    location: {
+        type: String,
     },
+    description: {
+        type: String,
+    },
+    // wishlist: {
+    //     type: Array, // or String? Not sure...
+    //     required: false 
+    // },
     reviews: [reviewSchema] // Does this make sense to put here? Based off the movie/review example I don't think it would because a drink isn't going to have user information on it. They're very different categories, would we want to separate them? If so, can we/how would we?
 });
 

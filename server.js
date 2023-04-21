@@ -7,7 +7,7 @@ const express = require('express')
 const app = express();
 
 // load and mount middleware
-const drinksRouter = require('./routes/drinks')
+const drinksRouter = require('./routes/drinks-routes')
 const reviewsRouter = require('./routes/reviews')
 const morgan = require('morgan')
 const methodOverride = require('method-override')
