@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <%- include('../partials/_navbar') %>
+    
+    <h1><%=drink.name%></h1>
+    <h3>Type: <%=drink.type%></h3>
+    <h3>Style: <%=drink.style%></h3>
+    <h3>From: <%=drink.location%></h3>
+    <h3>ABV%: <%=drink.abv%></h3>
+    <h4>Description: <%=drink.description%></h4>
+
+    <button><a href="/drinks/<%=drink._id%>/edit">Edit <%=drink.title%></a></button>
+    <form action="/drinks/<%=drink._id%>?_method=DELETE" method="POST">
+        <input type="submit" value="Delete <%=drink.title%>">
+
+</body>
+</html>
