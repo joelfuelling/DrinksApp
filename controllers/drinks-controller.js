@@ -15,7 +15,7 @@ const drinksController = {
     create: async (req, res) => {
         try{
             const newDrink = await Drink.create(req.body)
-            res.redirect(`/drinks/${newdrink._id}`)
+            res.redirect(`/drinks/${newDrink._id}`)
         }catch(err){
             console.log(err);
             res.send(err)

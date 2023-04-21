@@ -38,11 +38,6 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    userId: {
-        type: String,
-        unique: true, // ensures that no two documents in a collection have the same value for that field.
-        required: true
-    },
     email: { // What kinds of frontend validators (if any) would we need? @, .org/com/eu... ? At least _ # of characters long?       
         type: String,
         required: true
@@ -80,7 +75,7 @@ const drinkSchema = new mongoose.Schema({
     //     type: Array, // or String? Not sure...
     //     required: false 
     // },
-    reviews: [reviewSchema] // Does this make sense to put here? Based off the movie/review example I don't think it would because a drink isn't going to have user information on it. They're very different categories, would we want to separate them? If so, can we/how would we?
+    reviews: [reviewSchema], // Does this make sense to put here? Based off the movie/review example I don't think it would because a drink isn't going to have user information on it. They're very different categories, would we want to separate them? If so, can we/how would we?
 });
 
 const Drink = mongoose.model('Drink', drinkSchema);
