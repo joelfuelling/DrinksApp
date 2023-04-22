@@ -17,3 +17,12 @@ GitHUB requirement notes:
             https://github.com/takis-fuego-cohort/lessons-and-labs/blob/main/Unit_2/project_2/guide-to-user-centric-crud.md
     One-To-One Relationship
     One-To-Many Relationship
+
+
+
+PASSPORT INFO:::
+
+IMPORTANT: req.user will be the logged in user's Mongoose document❗️
+- If a user is not logged in, req.user will be undefined.
+- You will then be able to access the req.user document in all of the controller actions - so, ***DO NOT*** write code to retrieve the user document from the DB because req.user is already the document!
+

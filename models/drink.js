@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema;
 
-const reviewSchema = new mongoose.Schema({
+const reviewSchema = new Schema({
     content: {
         type: String,
         required: true
@@ -19,14 +19,16 @@ const reviewSchema = new mongoose.Schema({
       },
       userName: String,
       userAvatar: String
-})
+}, {
+    timestamps: true
+});
 
 const drinkSchema = new mongoose.Schema({
-    name: { // pretty straight forward
+    name: { 
         type: String,
         required: true  
     },
-    type: { // or Category... Dropdown w/ forEach needed (see Performed example from class)
+    type: { // Dropdown w/ forEach needed (see Performer example from class)
         type: String,
         enum: ['Beer', 'Wine', 'Spirits', 'Other'], default: 'Select',
         required: true
@@ -43,7 +45,7 @@ const drinkSchema = new mongoose.Schema({
     description: {
         type: String,
     },
-    reviews: [reviewSchema], // Does this make sense to put here? Based off the movie/review example I don't think it would because a drink isn't going to have user information on it. They're very different categories, would we want to separate them? If so, can we/how would we?
+    reviews: [reviewSchema],
 });
 
 const Drink = mongoose.model('Drink', drinkSchema);
