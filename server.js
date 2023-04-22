@@ -1,16 +1,23 @@
+// I HOPE the order below is correct. I made some adjustments while going through the oauth setup to match movies to prioritize new routes, and Google auth routes.
+
 // load the process.env.VARIABLEs 
 require('dotenv').config()
 // connect mongoose to the mongodb cloud database
 require('./config/database-connect')
 const path = require('path');
 const express = require('express')
+const session = require('express-session');
+const passport = require('passport');
 const app = express();
 
+
 // load and mount middleware
+const indexRouter = require('./routes/index')
 const drinksRouter = require('./routes/drinks-routes')
 const reviewsRouter = require('./routes/reviews')
 const morgan = require('morgan')
-const methodOverride = require('method-override')
+const methodOverride = require('method-override');
+const cookieParser = require('cookie-parser');
 
 app.set('view engine', 'ejs')
 // override with POST having ?_method=DELETE
@@ -21,6 +28,18 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Gives us form data as req.body
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+app.use(cookieParser());
+app.use(session({ // middleware for cookeiParser (Express session verification)
+    secret: process.env.SECRET,
+    resave: false,
+    saveUninitialized: true
+  }));
+app.use(passport.initialize());
+app.use(passport.session());
+app.use(function (req, res, next) {
+    res.locals.user = req.user;
+    next();
+  });
 // Log req.body if there is one
 app.use((req, res, next)=>{
     if(req.method.toLowerCase() === "post"){
@@ -29,8 +48,7 @@ app.use((req, res, next)=>{
     next();
 })
 
-// ANY route starting with /drinks in the url...
-// Send it over to the drinksRouter to complete the job
+app.use('/', indexRouter);
 app.use('/drinks', drinksRouter)
 // Reviews Router will have to handle various request urls:
 // /drinks/movie_id/reviews

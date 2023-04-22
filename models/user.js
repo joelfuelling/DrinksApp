@@ -1,21 +1,19 @@
 const mongoose = require('mongoose')
 
 const userSchema = new mongoose.Schema({
-    name: {
-        type: String,
-        required: true
-    },
-    email: {
+    name: String,
+    googleId: {
         type: String,
         required: true
     },
     points: {
         type: Number,
-    }
-    // One-To-Many Relationship
-    // One-To-One Relationship
-    // Many-To-Many Relationship
-})
+    },
+    email: String,
+    avatar: String
+}, {
+  timestamps: true
+});
 
 const User = mongoose.model('User', userSchema);
 module.exports = User;
