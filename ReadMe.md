@@ -17,3 +17,9 @@ GitHUB requirement notes:
             https://github.com/takis-fuego-cohort/lessons-and-labs/blob/main/Unit_2/project_2/guide-to-user-centric-crud.md
     One-To-One Relationship
     One-To-Many Relationship
+
+Sunday, Apr 23:
+    - Main setup for google Oauth complete. 
+    - Navbar initial setup complete with logos and basic formatting.
+        - Home/Google image only rendering on index page. This needs fixed.
+        - Formatting has pushed stuff to bottom of page, likely from importing some of the movies CSS as a starting point.

@@ -1,5 +1,18 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
 <nav>
-    <a href="/drinks">Home Page</a>
-    <a href="/drinks/new">Add to BrewVine</a>
+    <a href="/drinks" class="home"><img src="images/home.png"></a>
+  <% if (user) { %>
+    <a href="/drinks/new" class="add-drink">ADD TO FRIDGE</a><a href="/logout" class="logout">LOG OUT<img src="images/logout.png"></a>
+    
+  <% } else { %>
+    <a href="/auth/google" class="login">LOG IN<img src="images/Gimage.png"></a>
+  <% } %>
+    
 </nav>

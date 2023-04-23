@@ -1,0 +1,67 @@
+@media screen and (max-width: 500px) {
+
+}
+/* Movie template CSS to be adjusted */
+body {
+  margin: 0;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 50px 1fr;
+  grid-template-areas: 
+    "nav"
+    "main"
+}
+
+body > nav {
+  grid-area: nav;
+  background-color: #B8C0C2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+body > main {
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #E8ECEB;
+  padding: 20px;
+  overflow-y: scroll;
+}
+
+nav > a {
+  margin: 10px;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+nav > a:hover:not(.active) {
+  color: white;
+  background-color: #826010;
+}
+
+nav > a.active {
+  color: white;
+  cursor: default;
+}
+
+/* What I added below */
+.login, .logout {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+
+.home  {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+  
+.login img, .logout img, .home img {
+
+  height: 24px;
+}

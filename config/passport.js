@@ -3,7 +3,7 @@
 // 1 - after creating the 'passport = require('passport');', we have to run 'npm i passport-google-oauth' in the CLI to install it.
 
 const passport = require('passport');
-const GoogleStrategy = require('passport-google-oauth').BeerVineStrategy; // ? ok ? 1:30:24 video timestamp
+const GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
 const User = require('../models/user');
 
 passport.use(new GoogleStrategy(

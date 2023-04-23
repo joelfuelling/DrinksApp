@@ -30,7 +30,7 @@ router.get('/beervinecallback', passport.authenticate(
   ));
 
   // OAuth logout route
-router.get('/logout', function(req, res){
+router.get('/logout', function(req, res){ // The logout() method was automatically added to the req object by Passport!
     req.logout(function() {
       res.redirect('/drinks');
     });
