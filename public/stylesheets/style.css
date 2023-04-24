@@ -12,7 +12,7 @@
 } */
 
 /* Movie template CSS to be adjusted */
-body {
+/* body {
   margin: 0;
   height: 80vh;
   display: grid;
@@ -56,7 +56,7 @@ nav > a:hover:not(.active) {
 nav > a.active {
   color: white;
   cursor: default;
-}
+} */
 
 /* What I added below */
 .login, .logout {
@@ -80,7 +80,7 @@ nav > a.active {
 }
 
 /* review table tempalte taken from movie setup */
-.review-user {
+/* .review-user {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -89,4 +89,4 @@ nav > a.active {
 .review-user img {
   border-radius: 50%;
   height: 40px;
-}
+} */
