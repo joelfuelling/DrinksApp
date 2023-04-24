@@ -60,24 +60,6 @@ const drinksController = {
             res.send(err)
         }
     },
-    // addReview: async (req, res) => {
-    //     try{
-    //         if(!req.body.drinkId){
-    //             throw new Error("must have drink id")
-    //         }
-    //         // grab the drink we are adding the review to
-    //         const drink = await Drink.findById(req.params.id)
-    //         // add the drinkId to the array of ids in drink
-    //         Drink.cast.push(req.body.drinkId) // This is reference strategy for many-to-many which we won't need since we're doing the embedded approach.
-    //         // save the drink
-    //         await Drink.save()
-    //         // redirect to the show page
-    //         res.redirect(`/drinks/${drink._id}`)
-    //     }catch(err){
-    //         res.send(err)
-    //     }
-
-    // }
 }
 
 module.exports = drinksController

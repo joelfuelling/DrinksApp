@@ -22,14 +22,25 @@ const reviewsController = {
         }
     },
     delete: async (req, res) => {
-        try{
-            await Drink.reviews.deleteOne(req.params.id);
-            await Drink.save();
-            res.redirect(`/drinks/${drink._id}`);
-        }catch(err){
-            res.send(err)
-        }
-    },
+        await Drink.findOne({'reviews._id': req.params.id, 'reviews.user': req.user._id}).then(function(drink) {
+            if (!drink) return res.redirect('/drinks')
+            drink.reviews.remove(req.params.id)
+            drink.save().then(function() {
+                res.redirect(`/drinks/${drink._id}`)
+            }).catch(function(alert) {
+                return next(alert("You cannot delete a review created by someone else"));
+            })
+        })
+    }   
 }
+//         try{
+//             await Drink.reviews.deleteOne(req.params.id);
+//             await Drink.save();
+//             res.redirect(`/drinks/${drink._id}`);
+//         }catch(err){
+//             res.send(err)
+//         }
+//     },
+// }
 
 module.exports = reviewsController
