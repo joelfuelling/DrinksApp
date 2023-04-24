@@ -18,8 +18,18 @@ GitHUB requirement notes:
     One-To-One Relationship
     One-To-Many Relationship
 
-Sunday, Apr 23:
+Sunday, Apr 23, Joel:
     - Main setup for google Oauth complete. 
     - Navbar initial setup complete with logos and basic formatting.
         - Home/Google image only rendering on index page. This needs fixed.
         - Formatting has pushed stuff to bottom of page, likely from importing some of the movies CSS as a starting point.
+    - Commented out existing userSchema due to it having it's own model.
+
+    - REVIEWS:
+        - Added review setup to show page.(not complete!!!)
+        - Updated reviewSchema for user centric functionality.
+        - It seems there is no server response currently when trying to submit review.
+        - at 2 hour mark of oAuth video.
+
+    - EDIT:
+        - Currently, you can leave the edit fields blank and then it "disappers" from show page. Needs corrected so that each filed is required.

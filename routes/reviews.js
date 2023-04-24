@@ -5,4 +5,6 @@ const reviewsController = require('../controllers/reviews-controller')
 // create a new review for a movie
 router.post('/drinks/:drink_id/reviews', reviewsController.create)
 
+// Will need delete setup as well.
+
 module.exports = router;

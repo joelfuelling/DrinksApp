@@ -1,10 +1,20 @@
 @media screen and (max-width: 500px) {
 
 }
+
+/* #bvlogo {
+  background: url(images/BrewVineLogo.png) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  opacity: .35;
+} */
+
 /* Movie template CSS to be adjusted */
 body {
   margin: 0;
-  height: 100vh;
+  height: 80vh;
   display: grid;
   grid-template-rows: 50px 1fr;
   grid-template-areas: 
@@ -34,7 +44,7 @@ body > main {
 nav > a {
   margin: 10px;
   text-decoration: none;
-  padding: 10px;
+  padding: 6px;
   border-radius: 5px;
 }
 
@@ -62,6 +72,21 @@ nav > a.active {
 }
   
 .login img, .logout img, .home img {
-
   height: 24px;
+}
+
+.edit-button {
+  width: 50px;
+}
+
+/* review table tempalte taken from movie setup */
+.review-user {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.review-user img {
+  border-radius: 50%;
+  height: 40px;
 }
