@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema;
 
-const reviewSchema = new Schema({
+const reviewSchema = new mongoose.Schema({
     content: {
         type: String,
         required: true
@@ -10,19 +10,37 @@ const reviewSchema = new Schema({
         type: Number,
         min: 1,
         max: 5,
+        default: 5,
         required: true
     },
     user: {
-        type: Schema.Types.ObjectId,
-        ref: 'User',
-        required: true
-      },
-      userName: String,
-      userAvatar: String
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User',
+    required: true
+  },
+  userName: String,
+  userAvatar: String
 }, {
-    timestamps: true
+  timestamps: true
 });
 
+// The below userSchema has it's own user.js file, which is then reference above in the reviewSchema.
+// const userSchema = new mongoose.Schema({
+//     name: {
+//         type: String,
+//         required: true
+//     },
+//     email: { // What kinds of frontend validators (if any) would we need? @, .org/com/eu... ? At least _ # of characters long?       
+//         type: String,
+//         required: true
+//     },
+//     points: { // How would we accumulate these? Obvioulsy a function, but how/why would the user get points?
+//         type: Number,
+//         min: 0,
+//         max: 100,
+//         required: false // false?
+//     },
+// })
 const drinkSchema = new mongoose.Schema({
     name: { 
         type: String,
