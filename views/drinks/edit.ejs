@@ -11,7 +11,7 @@
     <h1>Edit <%= drink.name %></h1>
     <form action="/drinks/<%=drink._id%>?_method=PUT" method="POST">
         <label for="name">Name:</label>
-        <input type="text" name="name" value="<%= drink.title %>">
+        <input type="text" name="name" value="<%= drink.name %>">
         <br>
         <label for="type">type:</label>
         <select name="rating" value="<%=drink.type%>">
@@ -22,16 +22,16 @@
         </select>
         <br>
         <label for="style">Style:</label>
-        <input type="text" name="style">
+        <input type="text" name="style"value="<%= drink.style %>">
         <br>
         <label for="abv">ABV%:</label>
-        <input type="number" name="abv">
+        <input type="number" name="abv" step=".1"value="<%= drink.abv%>">
         <br>
-        <label for="location">Location</label>
-        <input type="text" name="location">
+        <label for="location">Location:</label>
+        <input type="text" name="location"value="<%= drink.location %>">
         <br>
-        <label for="description">Description</label>
-        <textarea name="description" ></textarea>
+        <label for="description">Description:</label><br>
+        <textarea name="description" rows ='4' cols='40' value="<%= drink.description %>"></textarea>
         <br>
         <input type="submit" value="Update drink">
     </form>
