@@ -21,14 +21,16 @@ Technologies Used
 
 Getting Started
 (your deployment url here)
+- Trello: https://trello.com/b/Mm3f15XZ/brewvine
 
 
+- Next steps (IceBox)
 
-Monday 4/24 - Next Steps
-- Jason: Connect reviews route to mongoDv (getting back {} currently)
+Monday morning 4/24 - Next Steps
+- Jason: Connect reviews route to mongoDb (getting back {} currently)
 - Sean: Work on fly.io deployment
 - Phillip: Populate database with data
-- Joel: Setup EnsureLoggedIn
+- Joel: Setup EnsureLoggedIn, reorganize ReadMe and Trello board.
 
 
 
