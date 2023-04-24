@@ -1,5 +1,3 @@
-// This route created for 9.1 of oAuth guide setup. 1:47:20 in video.
-
 let express = require('express');
 let router = express.Router();
 const passport = require('passport')
@@ -10,17 +8,12 @@ router.get('/', function(req, res, next) {
 
 // Google OAuth login route
 router.get('/auth/google', passport.authenticate(
-    // Which passport strategy is being used?
     'google',
     {
-      // Requesting the user's profile and email
       scope: ['profile', 'email'],
-      // Optionally force pick account every time
-      // prompt: "select_account"
     }
   ));
 
-  // Google OAuth callback route
 router.get('/beervinecallback', passport.authenticate(
     'google',
     {
@@ -29,7 +22,6 @@ router.get('/beervinecallback', passport.authenticate(
     }
   ));
 
-  // OAuth logout route
 router.get('/logout', function(req, res){ // The logout() method was automatically added to the req object by Passport!
     req.logout(function() {
       res.redirect('/drinks');

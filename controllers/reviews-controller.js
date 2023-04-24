@@ -21,16 +21,15 @@ const reviewsController = {
             res.send(err)
         }
     },
-    // delete: async (req, res) => {
-    //     try{
-    //         await Drink.reviews.deleteOne(req.params.id);
-    //         await Drink.save();
-    //         res.redirect(`/drinks/${req.params.id}`);
-            
-    //     }catch(err){
-    //         res.send(err)
-    //     }
-    // },
+    delete: async (req, res) => {
+        try{
+            await Drink.reviews.deleteOne(req.params.id);
+            await Drink.save();
+            res.redirect(`/drinks/${drink._id}`);
+        }catch(err){
+            res.send(err)
+        }
+    },
 }
 
 module.exports = reviewsController
