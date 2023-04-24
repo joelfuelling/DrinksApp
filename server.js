@@ -28,7 +28,7 @@ app.use(morgan('dev'))
 app.use(express.static(path.join(__dirname, 'public')));
 // Gives us form data as req.body
 app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(session({ // middleware for cookeiParser (Express session verification)
     secret: process.env.SECRET,
