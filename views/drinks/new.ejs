@@ -8,7 +8,7 @@
 </head>
 <body>
     <%- include('../partials/_navbar') %>
-    <h1>Add drink to the Fridge</h1>
+    <h1>Add a drink to the Fridge</h1>
     <form action="/drinks" method="POST">
         <label for="name">Name:</label>
         <input type="text" name="name">
@@ -25,13 +25,13 @@
         <input type="text" name="style">
         <br>
         <label for="abv">ABV%:</label>
-        <input type="number" name="abv">
+        <input type="number" name="abv" step=".1">
         <br>
-        <label for="location">Location</label>
+        <label for="location">Location:</label>
         <input type="text" name="location">
         <br>
-        <label for="description">Description</label>
-        <textarea name="description" ></textarea>
+        <label for="description">Description:</label><br>
+        <textarea name="description" rows ="4" cols = '40' ></textarea>
         <br>
         <input type="submit" value="Add to BrewVine">
     </form>
