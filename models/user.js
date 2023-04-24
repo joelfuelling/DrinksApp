@@ -1,19 +1,34 @@
 const mongoose = require('mongoose')
+const Schema = mongoose.Schema;
 
-const userSchema = new mongoose.Schema({
+// IMPORTANT: req.user will be the logged in user's Mongoose document❗️
+    // If a user is not logged in, req.user will be undefined.
+// You will then be able to access the req.user document in all of the controller actions - so, ***DO NOT*** write code to retrieve the user document from the DB because req.user is already the document!
+
+const userSchema = new Schema({
     name: String,
     googleId: {
         type: String,
         required: true
+  },
+    email: { // What kinds of frontend validators (if any) would we need? @, .org/com/eu... ? At least _ # of characters long?       
+        type: String,
+        required: true
     },
-    points: {
+    points: { // How would we accumulate these? Obvioulsy a function, but how/why would the user get points?
         type: Number,
+        min: 0,
+        max: 100,
+        required: false // false?
     },
-    email: String,
-    avatar: String
-}, {
-  timestamps: true
-});
+    fridge: {
+        type: String,
+        required: false
+    },
+    wishlist: {
+        type: String,
+        required: false
+    },
+})
 
-const User = mongoose.model('User', userSchema);
-module.exports = User;
+module.exports = mongoose.model('User', userSchema);
