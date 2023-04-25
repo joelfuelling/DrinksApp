@@ -7,7 +7,8 @@
     <title><%= drink.name%></title>
 </head>
 <body>
-    <%- include('../partials/_navbar') %><% let total = 0 %>
+    <%- include('../partials/_navbar') %>
+    <% let total = 0 %>
     <% drink.reviews.forEach(function(drink) { %>
       <% total += drink.rating %>
     <% }); %>
@@ -64,14 +65,14 @@
                   <td><%= drink.content %></td>
                   <td><%= drink.rating %></td>
                   <td>
-                    <% if (user) { %>
-                    <form action="/reviews/<%=drink._id%>?_method=DELETE" method="POST">
-                      <input type="submit" value="Delete">
-                    </form>
-                    <% } %>
+                    <% if (user?._id.equals(drink.user)) { %>
+                  <form action="/reviews/<%= drink._id %>?_method=DELETE" method="POST">
+                    <button type="submit">Remove Review</button>
+                  </form>
+                  <% } %>
                   </td>
                 </tr>
-              <% }); %>
+                <% }); %>
               <tr>
                 <td colspan="3"></td>
                 <td><strong><%= (total / drink.reviews.length).toFixed(1) %></strong></td>
