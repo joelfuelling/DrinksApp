@@ -13,13 +13,19 @@
         <label for="name">Name:</label>
         <input type="text" name="name" value="<%= drink.name %>">
         <br>
-        <label for="type">type:</label>
+        <label for="type">Type:</label>
         <select name="rating" value="<%=drink.type%>">
             <option value="Beer">Beer</option>
             <option value="Wine">Wine</option>
             <option value="Spirits">Spirits</option>
             <option value="Other">Other</option>
         </select>
+        <br>
+        <label for="img">Image:</label>
+        <input type="text" name="img" value="<%= drink.img %>">
+        <br>
+        <label for="current_img">Current Image:</label>
+        <img src="<%=drink.img%>" width="150" height="150">
         <br>
         <label for="style">Style:</label>
         <input type="text" name="style"value="<%= drink.style %>">

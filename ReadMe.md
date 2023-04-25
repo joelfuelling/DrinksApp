@@ -25,9 +25,20 @@ Getting Started
 
 
 - Next steps (IceBox)
+Tuesday morning 4/25 - Next Steps
+- Jason:
+- Sean: 
+- Phillipi: Modified the models to store an image in DB and started styling pages.
+- Joel:
+
 
 Monday morning 4/24 - Next Steps
 - Sean: Work on fly.io deployment
+
+- Phillipi: Populate database with data
+- Joel: Setup EnsureLoggedIn, reorganize ReadMe and Trello board.
+
+
 - Phillip: Work on CSS
 - Joel: Setup EnsureLoggedIn, reorganize ReadMe and Trello board.
 
@@ -42,6 +53,7 @@ TUesday morning 4/25 - Next Steps
 - Phillip: Work on CSS
 - Jason: Working on sort/filter method to show drink type.
 - Joel: Work on icons showing in edit view, and avatar not showing on reviews.
+
 
 
 
