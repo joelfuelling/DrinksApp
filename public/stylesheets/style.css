@@ -1,0 +1,133 @@
+@media screen and (max-width: 500px) {
+
+}
+
+/* #bvlogo {
+  background: url(images/BrewVineLogo.png) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  opacity: .35;
+} */
+
+/* Movie template CSS to be adjusted */
+/* body {
+  margin: 0;
+  height: 80vh;
+  display: grid;
+  grid-template-rows: 50px 1fr;
+  grid-template-areas: 
+    "nav"
+    "main"
+}
+
+body > nav {
+  grid-area: nav;
+  background-color: #B8C0C2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+body > main {
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #E8ECEB;
+  padding: 20px;
+  overflow-y: scroll;
+}
+
+nav > a {
+  margin: 10px;
+  text-decoration: none;
+  padding: 6px;
+  border-radius: 5px;
+}
+
+nav > a:hover:not(.active) {
+  color: white;
+  background-color: #826010;
+}
+
+nav > a.active {
+  color: white;
+  cursor: default;
+} */
+
+/* What I added below */
+.login, .logout {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+
+.home  {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+  
+.login img, .logout img, .home img {
+  height: 24px;
+}
+
+.edit-button {
+  width: 50px;
+}
+
+/* review table tempalte taken from movie setup */
+/* .review-user {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.review-user img {
+  border-radius: 50%;
+  height: 40px;
+} */
+
+/*-----------------------------Phill's------------------------------------*/
+
+body {
+  background-color: #ffff;
+}
+
+ .logo {
+  width: 200px;
+  position:fixed;
+  top: 20px;
+  left: 900px;
+  margin: 10px 20px;
+}
+ 
+h1 {
+  color: #030303;
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 60px;
+  margin-top: 20px;
+}
+
+.header-text {
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin-top: 10%;
+  font-size: 20px; 
+  color:#673a10;
+}
+.drink-details {
+  color: rgb(16, 14, 14);
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  /* margin: 10px;
+  display: block;
+  padding: 50px 8px 8px 8px;
+  position: relative;
+  max-width: 235px;
+  box-sizing: border-box;
+  min-height: 375px;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  border-radius: 12px; */
+}
