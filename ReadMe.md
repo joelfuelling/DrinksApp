@@ -25,19 +25,18 @@ Getting Started
 
 
 - Next steps (IceBox)
+Tuesday morning 4/25 - Next Steps
+- Jason:
+- Sean: 
+- Phillipi: Modified the models to store an image in DB and started styling pages.
+- Joel:
+
 
 Monday morning 4/24 - Next Steps
 - Jason: Connect reviews route to mongoDb (getting back {} currently)
 - Sean: Work on fly.io deployment
-- Phillip: Populate database with data
+- Phillipi: Populate database with data
 - Joel: Setup EnsureLoggedIn, reorganize ReadMe and Trello board.
-
-
-
-
-
-
-
 
 ***Working diary/notes***
 Sunday, Apr 23, Joel:

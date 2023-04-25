@@ -51,6 +51,9 @@ const drinkSchema = new mongoose.Schema({
         enum: ['Beer', 'Wine', 'Spirits', 'Other'], default: 'Select',
         required: true
     },
+    img: { 
+        type: String
+    },
     style: {
         type: String,
     },
