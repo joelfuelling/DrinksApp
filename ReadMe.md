@@ -33,10 +33,34 @@ Tuesday morning 4/25 - Next Steps
 
 
 Monday morning 4/24 - Next Steps
-- Jason: Connect reviews route to mongoDb (getting back {} currently)
 - Sean: Work on fly.io deployment
+
 - Phillipi: Populate database with data
 - Joel: Setup EnsureLoggedIn, reorganize ReadMe and Trello board.
+
+
+- Phillip: Work on CSS
+- Joel: Setup EnsureLoggedIn, reorganize ReadMe and Trello board.
+
+Monday afternoon 4/24 -
+- Sean: Work on fly.io ***CURRENT KNOWN ISSUE with fly.io deployment (https://community.fly.io/t/reliability-its-not-great/11253)
+- Phillip: Work on CSS
+- Joel: Completed EnsureLoggedIn, worked with Jason to figure out Delete Reviews setup.
+- Jason: Worked with Joel to figure out Delete Reviews setup and discuss filtering option.
+
+TUesday morning 4/25 - Next Steps
+- Sean: Work on fly.io deployment/Home Page creation
+- Phillip: Work on CSS
+- Jason: Working on sort/filter method to show drink type.
+- Joel: Work on icons showing in edit view, and avatar not showing on reviews.
+
+
+
+
+
+
+
+
 
 ***Working diary/notes***
 Sunday, Apr 23, Joel:
