@@ -1,11 +1,10 @@
 const mongoose = require('mongoose')
-const Schema = mongoose.Schema;
 
 // IMPORTANT: req.user will be the logged in user's Mongoose document❗️
     // If a user is not logged in, req.user will be undefined.
 // You will then be able to access the req.user document in all of the controller actions - so, ***DO NOT*** write code to retrieve the user document from the DB because req.user is already the document!
 
-const userSchema = new Schema({
+const userSchema = new mongoose.Schema({
     name: String,
     googleId: {
         type: String,
@@ -29,6 +28,7 @@ const userSchema = new Schema({
         type: String,
         required: false
     },
+    avatar: String
 })
 
 module.exports = mongoose.model('User', userSchema);
