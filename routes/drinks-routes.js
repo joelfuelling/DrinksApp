@@ -1,21 +1,20 @@
 const express = require('express')
 const router = express.Router()
 const drinksController = require('../controllers/drinks-controller')
-const ensureLoggedIn = require('../config/ensureLoggedIn')
 
 router.get('/', drinksController.index)
 
-router.get('/new', ensureLoggedIn, drinksController.new)
+router.get('/new', drinksController.new)
 
-router.post('/', ensureLoggedIn, drinksController.create)
+router.post('/', drinksController.create)
 
 router.get('/:id', drinksController.show)
 
-router.delete('/:id', ensureLoggedIn, drinksController.delete)
+router.delete('/:id', drinksController.delete)
 
-router.get('/:id/edit', ensureLoggedIn, drinksController.edit)
+router.get('/:id/edit', drinksController.edit)
 
-router.put('/:id', ensureLoggedIn, drinksController.update)
+router.put('/:id', drinksController.update)
 
 // router.post('/:id/drinks', drinksController.addDrink)
 
