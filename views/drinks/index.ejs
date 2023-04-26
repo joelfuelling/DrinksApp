@@ -4,13 +4,21 @@
 <head>
   <%- include('../partials/head') %>
 </head>
-
-
 <body>
   <nav>
     <%- include('../partials/header') %>
   </nav>
-  <div class="container">
+  <div class="container">    <form action="/drinks" method="GET">
+    <label for="Type Selector">Type:</label>
+    <select name="type" >
+        <option value="Beer">Beer</option>
+        <option value="Wine">Wine</option>
+        <option value="Spirits">Spirits</option>
+        <option value="Other">Other</option>
+    </select>
+    <input type="submit" id="type-filter">   
+    </form>
+
     <div class="products">
       <% drinks.forEach((drink)=>{ %>
         <section>
@@ -25,50 +33,8 @@
     </div>
   </div>
 
-    <form action="/drinks" method="GET">
-    <label for="Type Selector">Type:</label>
-    <select name="type" >
-        <option value="Beer">Beer</option>
-        <option value="Wine">Wine</option>
-        <option value="Spirits">Spirits</option>
-        <option value="Other">Other</option>
-    </select>
-    <input type="submit" id="type-filter">   
-    </form>
-    <!-- <%- include('../partials/bvlogo') %>  I tried to do a semi opaque background that covered the whole background while not affecting any placement or anythign else. It's not working yet, but would be a nice touch if it did.-->
-    <h1>Welcome to BrewVine</h1>
-    <% drinks.forEach((drink)=>{ %>
-        <section class="drink-details">
-            <h3><a href="/drinks/<%=drink._id%>"><%=drink.name%></a></h3>
-        </section>
-    <% }) %>
 
-
-  <div id="header">
-    <div class= "container">
-      <nav>
-        <img src="/images/BrewVineLogo.png" class="logo" alt="BrewVineLogo"></a>
-      </nav>
-  <div class="header-text">
-  <h1>Welcome to BrewVine!</h1>
-  <p>BrewVine is a mobile application that caters to both beer and wine enthusiasts. The app provides users with a platform to discover new breweries and wineries, explore different types of beers and wines, and connect with other enthusiasts. With BrewVine, users can rate and review their favorite brews and wines, track the ones they've tried, and create a personalized list of recommendations based on their taste preferences.</p>
-  </div>
-  </div>
-  </div>
-
-     <!-- <%- include('../partials/bvlogo') %>  I tried to do a semi opaque background that covered the whole background while not affecting any placement or anythign else. It's not working yet, but would be a nice touch if it did.-->
-     
-     
-  <% drinks.forEach((drink)=>{ %>
-    <section class="drink-details">
-        <h3><a href="/drinks/<%=drink._id%>"><%=drink.name%></a></h3>
-       <img src="<%=drink.img%>" width="150" height="150">
-    </section>
-<% }) %>
-
-
-
-
+ 
 </body>
 
 </html>
