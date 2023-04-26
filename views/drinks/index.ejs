@@ -1,37 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/b0bc6568b2.js" crossorigin="anonymous"></script>
-    <title>BrewVine</title>
+  <%- include('../partials/head') %>
 </head>
-<%- include('../partials/_navbar') %>
+
 <body>
-
-  <div id="header">
-    <div class= "container">
-      <nav>
-        <img src="/images/BrewVineLogo.png" class="logo" alt="BrewVineLogo"></a>
-      </nav>
-  <div class="header-text">
-  <h1>Welcome to BrewVine!</h1>
-  <p>BrewVine is a mobile application that caters to both beer and wine enthusiasts. The app provides users with a platform to discover new breweries and wineries, explore different types of beers and wines, and connect with other enthusiasts. With BrewVine, users can rate and review their favorite brews and wines, track the ones they've tried, and create a personalized list of recommendations based on their taste preferences.</p>
+  <nav>
+    <%- include('../partials/header') %>
+  </nav>
+  <div class="container">
+    <div class="products">
+      <% drinks.forEach((drink)=>{ %>
+        <section>
+          <h3><a href="/drinks/<%=drink._id%>">
+              <%=drink.name%>
+            </a></h3>
+          <% if (drink.img) { %>
+            <h4><a href="/drinks/<%=drink._id%>"><img src="<%= drink.img%>" alt="Drink image"></a></h4>
+            <% } %>
+        </section>
+        <% }) %>
+    </div>
   </div>
-  </div>
-  </div>
-
-     <!-- <%- include('../partials/bvlogo') %>  I tried to do a semi opaque background that covered the whole background while not affecting any placement or anythign else. It's not working yet, but would be a nice touch if it did.-->
-     
-     
-  <% drinks.forEach((drink)=>{ %>
-    <section class="drink-details">
-        <h3><a href="/drinks/<%=drink._id%>"><%=drink.name%></a></h3>
-       <img src="<%=drink.img%>" width="150" height="150">
-    </section>
-<% }) %>
-
-
 </body>
+
 </html>

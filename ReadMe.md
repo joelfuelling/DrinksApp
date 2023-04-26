@@ -1,4 +1,4 @@
-.-BeerVine-
+-BeerVine-
 - Personal drink catalog to track favorited and "wishlist" beverages, of which the user can review, edit, and delete.
 
 
@@ -53,6 +53,11 @@ TUesday morning 4/25 - Next Steps
 - Phillip: Work on CSS
 - Jason: Working on sort/filter method to show drink type.
 - Joel: Work on icons showing in edit view, and avatar not showing on reviews.
+
+Wednesday morning 4/26 - Next Steps
+ - Phillipi: - created partials for head html tag and created a partial header for the nav
+             - added div container for all the ejs templates 
+             - modified style.css but work left to be done (inspired from the fullstack lab)
 
 
 
