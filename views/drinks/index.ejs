@@ -5,12 +5,18 @@
   <%- include('../partials/head') %>
 </head>
 <body>
+
+<img src="public/images/Beer-right4.PNG" alt="">
+    <form action="/drinks" method="GET">
+
   <nav>
     <%- include('../partials/header') %>
   </nav>
   <div class="container">    <form action="/drinks" method="GET">
+
     <label for="Type Selector">Type:</label>
     <select name="type" >
+        <option value="All">All</option>
         <option value="Beer">Beer</option>
         <option value="Wine">Wine</option>
         <option value="Spirits">Spirits</option>
@@ -18,6 +24,9 @@
     </select>
     <input type="submit" id="type-filter">   
     </form>
+
+ 
+
 
     <div class="products">
       <% drinks.forEach((drink)=>{ %>

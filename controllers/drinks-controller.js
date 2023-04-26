@@ -6,7 +6,13 @@ const drinksController = {
             // grab the query info and set the variable
         const type = req.query.type
         // if variable matches the key in the model then render
-        if(type){
+        if(type === "All"){
+            const drinks = await Drink.find();
+               res.render('drinks/index', {
+            drinks: drinks
+        })
+     }else{
+            if(type){
             const drinks = await Drink.find({}).where('type',type);
             res.render('drinks/index', {
                drinks: drinks
@@ -18,6 +24,7 @@ const drinksController = {
             drinks: drinks
         })
         }
+    }
     }catch(err){
         console.log(err);
         res.send(err)
