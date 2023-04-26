@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <%- include('../partials/head') %>
-</head>
-
 <body>
+    <%- include('../partials/bvlogo') %>
     <nav>
-        <%- include('../partials/header') %>
+        <%- include('../partials/_navbar') %>
     </nav>
+    
     <div class="container">
         <h1>Add a drink to the Fridge</h1>
         <form action="/drinks" method="POST">

@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <%- include('../partials/head') %>
-</head>
 <body>
+  <%- include('../partials/bvlogo') %>
   <nav>
-    <%- include('../partials/header') %>
+    <%- include('../partials/_navbar') %>
   </nav>
+  
     <h1>Edit <%= drink.name %></h1>
     <form action="/drinks/<%=drink._id%>?_method=PUT" method="POST">
         <label for="name">Name:</label>

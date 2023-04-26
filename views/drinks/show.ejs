@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <%- include('../partials/head') %>
-</head>
 <body>
+  <%- include('../partials/bvlogo') %>
   <nav>
-    <%- include('../partials/header') %>
+    <%- include('../partials/_navbar') %>
   </nav>
-
+  
   <div class="container">
     <% let total = 0 %>
     <% drink.reviews.forEach(function(drink) { %>

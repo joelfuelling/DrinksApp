@@ -1,0 +1,6 @@
+.bvlogo {
+  position: fixed;
+  z-index: -3;
+  opacity: .35;
+  top: 100px;
+}
