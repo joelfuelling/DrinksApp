@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= drink.name%></title>
+  <%- include('../partials/head') %>
 </head>
 <body>
-    <%- include('../partials/_navbar') %>
+  <nav>
+    <%- include('../partials/header') %>
+  </nav>
+
+  <div class="container">
     <% let total = 0 %>
     <% drink.reviews.forEach(function(drink) { %>
       <% total += drink.rating %>
@@ -15,7 +16,7 @@
     
     <h1><%=drink.name%></h1>
     <h3>Type: <%=drink.type%></h3>
-    <h3>Image: <img src="<%=drink.img%>" width="150" height="150"></h3>
+    <h3><img src="<%=drink.img%>"></h3>
     <h3>Style: <%=drink.style%></h3>
     <h3>From: <%=drink.location%></h3>
     <h3>ABV%: <%=drink.abv%></h3>
@@ -83,5 +84,6 @@
     <% }else{ %>
         <h5>No Reviews Yet</h5>
     <% } %>
+  </div>
 </body>
 </html>

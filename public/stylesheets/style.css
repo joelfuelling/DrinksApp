@@ -1,64 +1,8 @@
-@media screen and (max-width: 500px) {
+/* 
 
-}
-
-/* #bvlogo {
-  background: url(images/BrewVineLogo.png) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  opacity: .35;
-} */
-
-/* Movie template CSS to be adjusted */
-/* body {
-  margin: 0;
-  height: 80vh;
-  display: grid;
-  grid-template-rows: 50px 1fr;
-  grid-template-areas: 
-    "nav"
-    "main"
-}
-
-body > nav {
-  grid-area: nav;
-  background-color: #B8C0C2;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+old stuff 
 
 
-body > main {
-  grid-area: main;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #E8ECEB;
-  padding: 20px;
-  overflow-y: scroll;
-}
-
-nav > a {
-  margin: 10px;
-  text-decoration: none;
-  padding: 6px;
-  border-radius: 5px;
-}
-
-nav > a:hover:not(.active) {
-  color: white;
-  background-color: #826010;
-}
-
-nav > a.active {
-  color: white;
-  cursor: default;
-} */
-
-/* What I added below */
 .login, .logout {
   display: flex;
   justify-content: right;
@@ -78,20 +22,6 @@ nav > a.active {
 .edit-button {
   width: 50px;
 }
-
-/* review table tempalte taken from movie setup */
-/* .review-user {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.review-user img {
-  border-radius: 50%;
-  height: 40px;
-} */
-
-/*-----------------------------Phill's------------------------------------*/
 
 body {
   background-color: #ffff;
@@ -121,7 +51,7 @@ h1 {
 .drink-details {
   color: rgb(16, 14, 14);
   font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  /* margin: 10px;
+  margin: 10px;
   display: block;
   padding: 50px 8px 8px 8px;
   position: relative;
@@ -129,5 +59,162 @@ h1 {
   box-sizing: border-box;
   min-height: 375px;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-  border-radius: 12px; */
+  border-radius: 12px; 
 }
+
+*/
+
+h1 {
+    display: inline-block;
+    color: #ADEAED;
+    padding-left: 1em;
+    font-size: 4vmax;
+    margin-top: .3em;
+    text-shadow: 1px 1px 2px #96DADD;
+  }
+  
+  h1:hover {
+    text-shadow: 1px 1px 2px #F5B8D9;
+  }
+  
+  a {
+    text-decoration: none;
+    color:#ADEAED;
+    text-shadow: .5px .5px 1px black;
+  }
+  
+  button {
+    box-shadow: 1px 1px 4px ghostwhite;
+  }
+  
+  nav {
+    background-color: #a98409;
+    width: 100%;
+    position: fixed;
+    top : 0;
+    z-index: 2;
+    box-shadow: 4px 4px 8px silver;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  input, textarea {
+    min-width: 70%;
+  }
+  .container {
+    max-width: 37.5em;
+    margin: auto;
+    margin-top: 2em;
+  }
+  
+  .new-product {
+    background-color: #F5B8D9;
+    margin-top: 1em;
+    text-align: center;
+    margin-right: 2em;
+  }
+  
+  h2  {
+    margin-top: 3em;
+    text-align: center;
+    font-size: 2.5em;
+    color: #FFC300;
+    text-shadow: .5px .5px  grey;
+  }
+  
+  .card {
+    flex-basis: 20%;
+    text-align: center;
+    padding: .3em;
+    margin: .5em;
+    box-shadow: 1px 1px 2px silver, -1px 1px 2px silver;
+    border-radius: 10px;
+    background-color: #FFF5EC;
+    height: 237px;
+    overflow: scroll;
+  }
+  
+  .card h5 {
+    padding-top: 1em;
+    font-size: 1em;
+  }
+  
+  img {
+    max-width: 90%;
+    max-height: 10vmax;
+  }
+  
+  .card img:hover {
+    box-shadow: 0 0 8px #96DADD;
+  }
+  
+  
+  p {
+    max-width:70%;
+    margin: auto;
+  }
+  
+  .jumbo-img {
+    max-width: 90%;
+    max-height: 25vmax;
+  }
+  
+  .jumbo {
+    margin:auto;
+    width:90%;
+    text-align: center;
+    padding: .3em;
+    margin: 1em;
+    background-color: #FFF5EC;
+    border-radius: 10%;
+    border: .2em solid #272124;
+  }
+  
+  .jumbo h3 {
+    padding: 1em;
+    font-size: 3vmax;
+  }
+  
+  .buy-button {
+    background-color: #96DADD;
+  }
+  
+  .delete-button {
+    background-color: #EEA2CC;
+    margin-left: 1em;
+  }
+  
+  input.edit-button , .edit-button {
+    background-color: #D5F695;
+  }
+  
+  .admin-actions {
+    display:flex;
+    justify-content: center;
+  
+  }
+  
+  .products {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  @media only screen and (max-width: 820px) {
+      .card {
+          flex-basis: 28%;
+      }
+      .container{
+        width: 95%;
+      }
+  }
+  @media only screen and (max-width: 530px) {
+    .container{
+      margin-top: 12em;
+      width: 95%;
+    }
+    .card {
+        flex-basis: 43%;
+    }
+  }
+  

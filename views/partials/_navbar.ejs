@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,12 +9,13 @@
   <link rel='stylesheet' href='/stylesheets/style.css' />
 </head>
 <nav>
-    <a href="/drinks" class="home"><img src="images/home.png"></a>
+    <a href="/drinks" class="home"><img src="/images/home.png"></a>
   <% if (user) { %>
-    <a href="/drinks/new" class="add-drink">ADD TO FRIDGE</a><a href="/logout" class="logout">LOG OUT<img src="images/logout.png"></a>
+    <a href="/drinks/new" class="add-drink">ADD TO FRIDGE</a><a href="/logout" class="logout">LOG OUT<img src="/images/logout.png"></a>
     
   <% } else { %>
-    <a href="/auth/google" class="login">LOG IN<img src="images/Gimage.png"></a>
+    <a href="/auth/google" class="login">LOG IN<img src="/images/Gimage.png"></a>
   <% } %>
     
 </nav>
+

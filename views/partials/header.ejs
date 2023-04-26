@@ -1,0 +1,8 @@
+<img src="/images/BrewVineLogo.png" class="logo" alt="BrewVineLogo" width="50" height="50"></a>
+<a href="/drinks" class="home"><img src="/images/home.png" width="50" height="50"></a>
+<% if (user) { %>
+    <a href="/drinks/new" class="add-drink">ADD TO FRIDGE</a><a href="/logout" class="logout">LOG OUT<img src="/images/logout.png"></a>
+    <% } else { %>
+        <a href="/auth/google" class="login">LOG IN<img src="/images/Gimage.png" width="50" height="50">></a>
+    <% } %>
+
