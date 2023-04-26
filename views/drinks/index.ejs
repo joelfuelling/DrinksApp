@@ -9,10 +9,11 @@
 </head>
 <%- include('../partials/_navbar') %>
 <body>
-
+<img src="public/images/Beer-right4.PNG" alt="">
     <form action="/drinks" method="GET">
     <label for="Type Selector">Type:</label>
     <select name="type" >
+        <option value="All">All</option>
         <option value="Beer">Beer</option>
         <option value="Wine">Wine</option>
         <option value="Spirits">Spirits</option>
@@ -21,12 +22,6 @@
     <input type="submit" id="type-filter">   
     </form>
     <!-- <%- include('../partials/bvlogo') %>  I tried to do a semi opaque background that covered the whole background while not affecting any placement or anythign else. It's not working yet, but would be a nice touch if it did.-->
-    <h1>Welcome to BrewVine</h1>
-    <% drinks.forEach((drink)=>{ %>
-        <section class="drink-details">
-            <h3><a href="/drinks/<%=drink._id%>"><%=drink.name%></a></h3>
-        </section>
-    <% }) %>
 
 
   <div id="header">
