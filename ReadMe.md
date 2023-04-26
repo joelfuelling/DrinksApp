@@ -20,7 +20,7 @@ Technologies Used
 
 
 Getting Started
-(your deployment url here)
+- Deployment: https://brewvine.fly.dev
 - Trello: https://trello.com/b/Mm3f15XZ/brewvine
 
 
