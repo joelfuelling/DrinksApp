@@ -1,6 +1,5 @@
-
 body {
-  margin-top: 12vh;
+  margin-top: 10vh;
 }
 
 header {
@@ -23,12 +22,6 @@ header {
   margin-right: 20px;
   height: 36px;
 }
-
-.edit-button {
-  width: 50px;
-}
-
-
 
 h1 {
     display: inline-block;
