@@ -2,12 +2,26 @@ const Drink = require('../models/drink')
 
 const drinksController = {
     index: async (req, res)=>{
-        // Get the drinks from the database
-        const drinks = await Drink.find();   
-        // Put them into the template
-        res.render('drinks/index', {
+        try{
+            // grab the query info and set the variable
+        const type = req.query.type
+        // if variable matches the key in the model then render
+        if(type){
+            const drinks = await Drink.find({}).where('type',type);
+            res.render('drinks/index', {
+               drinks: drinks
+            })
+    //    if nothing matches the query render full list
+        }else{
+                const drinks = await Drink.find();
+               res.render('drinks/index', {
             drinks: drinks
         })
+        }
+    }catch(err){
+        console.log(err);
+        res.send(err)
+    }
     },
     new: (req, res) => {
         res.render('drinks/new')
@@ -60,6 +74,7 @@ const drinksController = {
             res.send(err)
         }
     },
+  
 }
 
 module.exports = drinksController
