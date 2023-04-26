@@ -1,3 +1,4 @@
+
 body {
   margin-top: 12vh;
 }
@@ -27,13 +28,6 @@ header {
   width: 50px;
 }
 
-.logo {
-  width: 200px;
-  position:fixed;
-  top: 20px;
-  left: 900px;
-  margin: 10px 20px;
-}
 
 
 h1 {
