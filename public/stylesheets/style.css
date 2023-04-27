@@ -66,6 +66,12 @@ h1 {
     max-width: 37.5em;
     margin: auto;
     margin-top: 2em;
+    text-align: center;
+    text-overflow: wrap;
+    word-wrap: break-word;
+    white-space: initial;
+    
+    
   }
   
   .new-product {
@@ -159,6 +165,27 @@ h1 {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    text-align: center;
+    text-overflow: wrap;
+    word-wrap: break-word;
+    white-space: initial;
+    
+    
+  }
+  .products section h3{
+    text-align: center;
+    text-overflow: wrap;
+    word-wrap: break-word;
+    white-space: initial;
+    max-width: 80%;
+    align-items: center;
+    margin: auto;
+    
+  }
+  .products section h4{
+    bottom: 10%;
+    align-items:end;
+    
   }
   @media only screen and (max-width: 820px) {
       .card {

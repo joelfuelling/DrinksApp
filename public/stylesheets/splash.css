@@ -1,0 +1,53 @@
+body, html {
+    height: 100%;
+    position: relative;
+  }
+  
+  #bg {
+    /* The image used */
+    background-image: url("/images/beer-wine-right5.PNG");
+    
+  
+    /* Full height */
+    height: 100%;
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -2;
+  }
+  .head{
+    position: absolute;
+    color:white;
+    z-index: 2;
+    top:10%;
+    left:10%;
+    font-size: 40px;
+    font-family: 'Damion', cursive;
+    text-shadow: 10px 10px 10px rgb(184, 158, 42); ;
+  }
+  #box-21{
+    background-color: white;
+    z-index: 4;
+    position: absolute;
+    width: 20%;
+    height:20%;
+    top: 40%;
+    left: 18%;
+    text-align: center;
+    box-shadow: 10px 10px 10px rgb(184, 158, 42);
+  }
+  .button{
+    padding: 3%;
+    margin: 5%;
+    box-shadow: 10px 10px 10px rgb(184, 158, 42);
+    color: white;
+    background-color: rgb(175, 52, 11);
+  }
+  #bv-logo{
+    width: 30%;
+    position: absolute;
+    top: 1%;
+    left: 115%;
+  }

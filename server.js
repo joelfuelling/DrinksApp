@@ -14,6 +14,7 @@ const app = express();
 
 // load and mount middleware
 const indexRouter = require('./routes/index')
+const splashRouter = require('./routes/splash')
 const drinksRouter = require('./routes/drinks-routes')
 const reviewsRouter = require('./routes/reviews')
 const morgan = require('morgan')
@@ -52,8 +53,9 @@ app.use((req, res, next)=>{
     }
     next();
 })
-
+app.use('/', splashRouter)
 app.use('/', indexRouter);
+
 app.use('/drinks', drinksRouter)
 // Reviews Router will have to handle various request urls:
 // /drinks/movie_id/reviews
@@ -62,7 +64,7 @@ app.use('/drinks', drinksRouter)
 app.use('/', reviewsRouter)
 
 app.get('/', (req, res)=>{
-    res.render('home-page')
+    res.render('splash')
 })
 
 app.listen(3000, ()=>{
