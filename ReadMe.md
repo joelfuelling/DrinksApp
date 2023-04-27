@@ -18,6 +18,7 @@ Technologies Used
 - HTML
 - CSS
 - Google OAuth
+- fly.io
 
 
 Getting Started

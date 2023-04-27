@@ -1,9 +1,15 @@
+* {
+
+}
 body {
   margin-top: 10vh;
 }
 
 header {
-  margin: 50px;
+  font-family: tahome;
+  text-align: center;
+  margin: 35px;
+
 }
 .login, .logout {
   display: flex;
@@ -23,6 +29,14 @@ header {
   height: 36px;
 }
 
+.user-avatar-login {
+  max-height: 55px;
+  max-width: 55px;
+  position: absolute;
+  border-radius: 50%;
+  right: 175px;
+}
+
 h1 {
     display: inline-block;
     color: #ADEAED;
@@ -30,151 +44,117 @@ h1 {
     font-size: 4vmax;
     margin-top: .3em;
     text-shadow: 1px 1px 2px #96DADD;
-  }
-  
-  h1:hover {
-    text-shadow: 1px 1px 2px #F5B8D9;
-  }
-  
-  a {
-    text-decoration: none;
-    color:#ADEAED;
-    text-shadow: .5px .5px 1px black;
-  }
-  
-  button {
-    box-shadow: 1px 1px 4px ghostwhite;
-  }
-  
-  nav {
-    height: 65px;
-    background-color: #a98409;
-    width: 100%;
-    position: fixed;
-    top : 0;
-    z-index: 2;
-    box-shadow: 4px 4px 8px silver;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  input, textarea {
-    min-width: relative;
-  }
-  .container {
-    max-width: 37.5em;
-    margin: auto;
-    margin-top: 2em;
-  }
-  
-  .new-product {
-    background-color: #F5B8D9;
-    margin-top: 1em;
-    text-align: center;
-    margin-right: 2em;
-  }
-  
-  h2  {
-    margin-top: 3em;
-    text-align: center;
-    font-size: 2.5em;
-    color: #FFC300;
-    text-shadow: .5px .5px  grey;
-  }
-  
-  .card {
-    flex-basis: 20%;
-    text-align: center;
-    padding: .3em;
-    margin: .5em;
-    box-shadow: 1px 1px 2px silver, -1px 1px 2px silver;
-    border-radius: 10px;
-    background-color: #FFF5EC;
-    height: 237px;
-    overflow: scroll;
-  }
-  
-  .card h5 {
-    padding-top: 1em;
-    font-size: 1em;
-  }
-  
-  img {
-    max-width: 90%;
-    max-height: 10vmax;
-  }
-  
-  .card img:hover {
-    box-shadow: 0 0 8px #96DADD;
-  }
-  
-  
-  p {
-    max-width:70%;
-    margin: auto;
-  }
-  
-  .jumbo-img {
-    max-width: 90%;
-    max-height: 25vmax;
-  }
-  
-  .jumbo {
-    margin:auto;
-    width:90%;
-    text-align: center;
-    padding: .3em;
-    margin: 1em;
-    background-color: #FFF5EC;
-    border-radius: 10%;
-    border: .2em solid #272124;
-  }
-  
-  .jumbo h3 {
-    padding: 1em;
-    font-size: 3vmax;
-  }
-  
-  .buy-button {
-    background-color: #96DADD;
-  }
-  
-  .delete-button {
-    background-color: #EEA2CC;
-    margin-left: 1em;
-  }
-  
-  input.edit-button , .edit-button {
-    background-color: #D5F695;
-  }
-  
-  .admin-actions {
-    display:flex;
-    justify-content: center;
-  
-  }
-  
-  .products {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-  @media only screen and (max-width: 820px) {
-      .card {
-          flex-basis: 28%;
-      }
-      .container{
-        width: 95%;
-      }
-  }
-  @media only screen and (max-width: 530px) {
+}
+
+h1:hover {
+  text-shadow: 1px 1px 2px #F5B8D9;
+}
+
+a {
+  text-decoration: none;
+  color:#ADEAED;
+  text-shadow: .5px .5px 1px black;
+}
+
+button {
+  box-shadow: 1px 1px 4px ghostwhite;
+}
+
+nav {
+  height: 65px;
+  background-color: #a98409;
+  width: 100%;
+  position: fixed;
+  top : 0;
+  z-index: 2;
+  box-shadow: 4px 4px 8px silver;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+input, textarea {
+  min-width: relative;
+}
+
+.container {
+  max-width: 37.5em;
+  margin: auto;
+  margin-top: 2em;
+}
+
+.new-product {
+  background-color: #F5B8D9;
+  margin-top: 1em;
+  text-align: center;
+  margin-right: 2em;
+}
+
+h2  {
+  margin-top: 3em;
+  text-align: center;
+  font-size: 2.5em;
+  color: #FFC300;
+  text-shadow: .5px .5px  grey;
+}
+
+.card {
+  flex-basis: 20%;
+  text-align: center;
+  padding: .3em;
+  margin: .5em;
+  box-shadow: 1px 1px 2px silver, -1px 1px 2px silver;
+  border-radius: 10px;
+  background-color: #FFF5EC;
+  height: 237px;
+  overflow: scroll;
+}
+
+.card h5 {
+  padding-top: 1em;
+  font-size: 1em;
+}
+
+img {
+  max-width: 90%;
+  max-height: 10vmax;
+}
+
+.card img:hover {
+  box-shadow: 0 0 8px #96DADD;
+}
+
+
+p {
+  max-width:70%;
+  margin: auto;
+}  
+
+.products {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+
+
+@media only screen and (max-width: 820px) {
+    .card {
+        flex-basis: 28%;
+    }
     .container{
-      margin-top: 12em;
       width: 95%;
     }
-    .card {
-        flex-basis: 43%;
-    }
+}
+
+
+
+@media only screen and (max-width: 530px) {
+  .container{
+    margin-top: 12em;
+    width: 95%;
   }
-  
+  .card {
+      flex-basis: 43%;
+  }
+}
