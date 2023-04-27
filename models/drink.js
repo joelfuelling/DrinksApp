@@ -31,7 +31,7 @@ const drinkSchema = new mongoose.Schema({
     },
     type: { // Dropdown w/ forEach needed (see Performer example from class)
         type: String,
-        enum: ['Beer', 'Wine', 'Spirits', 'Other'], default: 'Select',
+        enum: ['Beer', 'Wine', 'Spirits', 'Other'], default: '',
         required: true
     },
     img: { 

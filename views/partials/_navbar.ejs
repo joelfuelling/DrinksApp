@@ -11,7 +11,7 @@
 <nav>
     <a href="/drinks" class="home"><img src="/images/home.png"></a>
   <% if (user) { %>
-    <a href="/drinks/new" class="add-drink">ADD TO FRIDGE</a><a href="/logout" class="logout">LOG OUT<img src="/images/logout.png"></a>
+    <a href="/drinks/new" class="add-drink">ADD TO THE FRIDGE</a><img alt="avatar" class="user-avatar-login" src="<%= user.avatar %>"><a href="/logout" class="logout">LOG OUT<img src="/images/logout.png"></a>
     
   <% } else { %>
     <a href="/auth/google" class="login">LOG IN<img src="/images/Gimage.png"></a>

@@ -17,8 +17,11 @@
         <label for="name">Name:</label>
         <input type="text" name="name" value="<%= drink.name %>">
         <br>
-        <label for="type">Type:</label>
-        <select name="rating" value="<%=drink.type%>">
+    </form>
+    <form action="/drinks/<%=drink._id%>?_method=PUT" method="POST">
+        <label for="type">Type:</label>  
+        <select name="rating" value="<%=drink.type%>" >
+            <option value="<%=drink.type%>" selected disabled hidden>Type</option>
             <option value="Beer">Beer</option>
             <option value="Wine">Wine</option>
             <option value="Spirits">Spirits</option>
@@ -41,7 +44,7 @@
         <input type="text" name="location"value="<%= drink.location %>">
         <br>
         <label for="description">Description:</label><br>
-        <textarea name="description" rows ='4' cols='40' value="<%= drink.description %>"></textarea>
+        <textarea name="description" rows ='4' cols='40'><%= drink.description %></textarea>
         <br>
         <input type="submit" value="Update drink">
     </form>
