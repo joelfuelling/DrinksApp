@@ -3,9 +3,7 @@ body {
   margin: 0;
   margin-top: 10vh;
 }
-form {
-  margin-bottom: 10vh;
-}
+
 header {
   text-align: center;
   margin: 35px;
@@ -40,7 +38,7 @@ header {
 
 a {
   text-decoration: none;
-  color:#ADEAED;
+  color:rgb(135, 6, 6);
   text-shadow: .5px .5px 1px black;
 }
 
