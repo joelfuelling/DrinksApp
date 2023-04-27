@@ -4,6 +4,11 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/stylesheets/show-style.css">
   <title><%= drink.name %></title>
 </head>
 <body>
@@ -11,40 +16,52 @@
   <nav>
     <%- include('../partials/_navbar') %>
   </nav>
-  
-  <div class="container">
+     
+    <div id="bg-pics-l">
+    </div>
+    <div id="bg-pics-r">
+    </div>
+  <div class="container" id="show-container">
     <% let total = 0 %>
     <% drink.reviews.forEach(function(drink) { %>
       <% total += drink.rating %>
     <% }); %>
     
-    <h1><%=drink.name%></h1>
-    <h3>Type: <%=drink.type%></h3>
-    <h3><img src="<%=drink.img%>"></h3>
-    <h3>Style: <%=drink.style%></h3>
-    <h3>From: <%=drink.location%></h3>
-    <h3>ABV%: <%=drink.abv%></h3>
-    <h4>Description: <%=drink.description%></h4>
-    <h3>Average User Rating: <strong><%= (total / drink.reviews.length).toFixed(1) %> </strong></h3>
+    <h1><%=drink.name%></h1><br>
+    
+    <h3><img src="<%=drink.img%>"></h3></section>
+    <div class="show-keys">
+    <section class="alpha"><h3 class="kappa">Type: </h3><h3><%=drink.type%></h3></section>
+    <section class="alpha"><h3 class="kappa">Style: </h3><h3><%=drink.style%></h3></section>
+    <section class="alpha"><h3 class="kappa">From: </h3><h3><%=drink.location%></h3></section>
+    <section class="alpha"><h3 class="kappa">ABV%: </h3><h3><%=drink.abv%></h3></section>
+    <section class="alpha"><h3 class="kappa">Description: </h3><h4 id="descript" ><%=drink.description%></h4></section>
+    <section class="alpha"><h3 class="kappa">Average User Rating:</h3> <h3><%= (total / drink.reviews.length).toFixed(1) %> </strong></h3></section>
+  </div>
     <% if (user) { %>
-    <button class="edit-button"><a href="/drinks/<%=drink._id%>/edit">Edit <%=drink.title%></a></button>
+      <div id="buttons-1">
+      <button><a class='button-2'href="/drinks/<%=drink._id%>/edit">Edit <%=drink.title%></a></button>
     <form action="/drinks/<%=drink._id%>?_method=DELETE" method="POST">
-        <input type="submit" value="Delete <%=drink.title%>">
+        <input type="submit" class=button-2 value ="Delete <%=drink.title%>">
     </form>
+  </div>
+
     <% } %>
     <% if (user) { %>
     <form action="/drinks/<%= drink._id %>/reviews" method="POST" id="add-review-form" >
-        <label>Review:</label>
-        <textarea name="content"></textarea>
-        <label>Rating:</label>
+        <div id="review-input"><label><h3>Review:</h3></label>
+        <textarea name="content" rows="5"></textarea>
+        </div>
+      <br>
+        <label><h3>Rating:</h3></label>
         <select name="rating">
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        </select>
-        <input type="submit" value="Add <%=drink.name%> Review">
+        <option value="1">1 - This Sucks</option>
+        <option value="2">2 - I don't like it, but it's booze</option>
+        <option value="3">3 - Meh</option>
+        <option value="4">4 - This is pretty damn good</option>
+        <option value="5">5 - Holy Shit!</option>
+        </select><br><br>
+        <input type="submit" class="button-2" value="Add <%=drink.name%> Review">
     </form>
     <% } %>
     <% if (drink.reviews.length) { %>
@@ -61,19 +78,19 @@
                 
               </tr>
             </thead>
-            <tbody>
+            <tbody id="review-li">
               <% let total = 0 %>
               <% drink.reviews.forEach(function(drink) { %>
                 <% total += drink.rating %>
                 <tr>
-                  <td class="review-user"><img alt="avatar" src="<%= drink.userAvatar %>" referrerpolicy="no-referrer" ><%= drink.userName %></td>
+                  <td id="review-user"><img alt="avatar" src="<%= drink.userAvatar %>" referrerpolicy="no-referrer" ><%= drink.userName %></td>
                   <td><%= drink.createdAt.toLocaleDateString() %></td>
                   <td><%= drink.content %></td>
                   <td><%= drink.rating %></td>
-                  <td>
+                  <td id="review-delete">
                     <% if (user?._id.equals(drink.user)) { %>
                   <form action="/reviews/<%= drink._id %>?_method=DELETE" method="POST">
-                    <button type="submit">Remove Review</button>
+                    <button class='button-2' type="submit">Remove Review</button>
                   </form>
                   <% } %>
                   </td>

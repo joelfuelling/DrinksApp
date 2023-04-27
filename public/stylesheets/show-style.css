@@ -1,0 +1,92 @@
+body{
+    box-sizing: border-box;
+}
+
+#bg-pics-l {
+    /* The image used */
+    background-image: url("/images/Wine-left1-tall.jpg");
+    position: fixed;
+    left:0%;
+    top:0%;
+    /* Full height */
+    height: 130%;
+    width: 20vw;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+  }
+  
+  #bg-pics-r {
+    /* The image used */
+    background-image: url("/images/Beer-Right2-Tall.jpg");
+    position: fixed;
+    right:0%;
+    top:0%;
+    /* Full height */
+    height: 130%;
+    width: 25vw;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+  }
+  #review-user{
+    justify-content: left;
+    display: flex;
+    align-items: center;
+   
+  }
+
+  #review-user img {
+    border-radius: 50%;
+    height: 40px;
+  }
+  #show-container h3{
+    display: inline;
+    margin-top: 20%;
+    text-align: left;
+  }
+
+  #show-container h3 .alpha{
+    display: inline;
+    margin-top: 20%;
+    text-align: left;
+  }
+  #review-input{
+    position: relative;
+    left: -3%;
+    top: -20%
+  }
+  form{
+    margin-bottom: 10%;
+  }
+  .alpha{
+    padding:2%;
+  }
+  h1{
+    font-family:'Racing Sans One', cursive;
+    font-size: 44px;
+    color:rgb(135, 6, 6)
+  }
+  .button-2{
+    color: rgb(135, 6, 6);
+    text-shadow: .5px .5px 1px black;
+  }
+  .show-keys{
+    position: relative;
+    margin-bottom:0;
+    text-align: left;
+    left: 30%;
+    width: 300px;
+  }
+  form .bravo{
+    padding: 1%
+  }
+  .kappa{
+    color: rgb(135, 6, 6);
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
+  }
