@@ -43,6 +43,9 @@ a {
   color:#ADEAED;
   text-shadow: .5px .5px 1px black;
 }
+nav > a:hover {
+  color: blue;
+}
 
 button {
   box-shadow: 1px 1px 4px ghostwhite;
@@ -220,7 +223,7 @@ header p{
 
 @media only screen and (max-width: 820px) {
     .card {
-        flex-basis: 28%;
+        flex-basis: 40%;
     }
     .container{
       width: 95%;
