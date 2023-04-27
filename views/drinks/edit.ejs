@@ -23,6 +23,7 @@
   <div class="container">
     <h1>Edit <%= drink.name %></h1>
     <form action="/drinks/<%=drink._id%>?_method=PUT" method="POST">
+
        
         
         <section class="bravo"><label class="kappa" for="current_img">Current Image:</label>
@@ -33,6 +34,11 @@
     <form action="/drinks/<%=drink._id%>?_method=PUT" method="POST">
       <section class="bravo"> <label class='kappa' for="name">Name: </label><input type="text" name="name" value="<%= drink.name %>"></section>
       <section class="bravo"><label class='kappa'for="type">Type: </label>  
+
+        <label for="name">Name:</label>
+        <input type="text" name="name" value="<%= drink.name %>">
+        <br>
+        <label for="type">Type:</label>  
         <select name="rating" value="<%=drink.type%>" >
             <option value="<%=drink.type%>" selected disabled hidden>Select</option>
             <option value="Beer">Beer</option>
@@ -56,4 +62,5 @@
     </form>
   </div>
 </body>
+
 </html>
