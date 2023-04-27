@@ -87,3 +87,6 @@ Sunday, Apr 23, Joel:
 
     - EDIT:
         - Currently, you can leave the edit fields blank and then it "disappers" from show page. Needs corrected so that each filed is required.
+
+        Beta Test2
+        
