@@ -44,7 +44,7 @@ a {
   text-shadow: .5px .5px 1px black;
 }
 nav > a:hover {
-  color: blue;
+  color: rgb(134, 1, 1);
 }
 
 button {
