@@ -9,6 +9,17 @@ header {
   margin: 35px;
 
 }
+header h1{
+  font-family:'Racing Sans One', cursive;
+    font-size: 44px;
+    color:rgb(135, 6, 6)
+}
+
+header p{
+  font-size: 20px;
+    width: 60%
+  
+}
 .login, .logout {
   display: flex;
   justify-content: right;
@@ -28,8 +39,8 @@ header {
 }
 
 .user-avatar{
-  max-height: 55px;
-  max-width: 55px;
+  max-height: 40px;
+  max-width: 40px;
   position: absolute;
   border-radius: 50%;
   right: 175px;
@@ -94,23 +105,6 @@ h2  {
   text-shadow: .5px .5px  grey;
 }
 
-.card {
-  flex-basis: 20%;
-  text-align: center;
-  padding: .3em;
-  margin: .5em;
-  box-shadow: 1px 1px 2px silver, -1px 1px 2px silver;
-  border-radius: 10px;
-  background-color: #FFF5EC;
-  height: 237px;
-  overflow: scroll;
-}
-
-.card h5 {
-  padding-top: 1em;
-  font-size: 1em;
-}
-
 img {
   max-width: 90%;
   max-height: 10vmax;
@@ -128,7 +122,8 @@ p {
 
 .products {
   display: flex;
-  justify-content: space-between;
+  columns: 3;
+  justify-content: center;
   flex-wrap: wrap;
     text-align: center;
     text-overflow: wrap;
@@ -137,6 +132,13 @@ p {
     
     
   }
+
+  .products section{
+    max-width: 160px;
+    min-width: 160px;
+    padding: 20px;
+  }
+
   .products section h3{
     text-align: center;
     text-overflow: wrap;
@@ -185,15 +187,17 @@ p {
   top:0%;
   /* Full height */
   height: 130%;
-  width: 25vw;
+  width: 20vw;
   /* Center and scale the image nicely */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   z-index: -1;
 }
-header p{
-  width: 50%
+
+.button-2{
+  color: rgb(135, 6, 6);
+  text-shadow: .5px .5px 1px black;
 }
 
 .gradient-footer {
@@ -225,6 +229,11 @@ header p{
     }
     .container{
       width: 95%;
+    }
+    header p{
+      font-size: 16px;
+        
+      
     }
 }
 
