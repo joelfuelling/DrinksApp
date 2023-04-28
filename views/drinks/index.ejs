@@ -47,12 +47,16 @@
     <div class="products">
       <% drinks.forEach((drink)=>{ %>
         <section>
+          <div class="cardcontainer">
+          <article class="card">
           <h3><a href="/drinks/<%=drink._id%>">
               <%=drink.name%>
             </a></h3>
           <% if (drink.img) { %>
             <h4><a href="/drinks/<%=drink._id%>"><img src="<%= drink.img%>" alt="Drink image"></a></h4>
             <% } %>
+          </article>
+          </div>        
         </section>
         <% }) %>
     </div>

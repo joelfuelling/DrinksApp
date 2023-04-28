@@ -1,0 +1,190 @@
+
+section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 100px 80px 1fr 80px 80px 80px  50px 30px;
+    grid-template-areas:  
+      'cardcontainer';
+     
+    background-color: orange;
+    margin: 30px;
+  }
+  
+  .navi {
+    grid-area: header;
+  }
+  
+  .footi {
+    grid-area: footer;
+  }
+  
+  .filter {
+    grid-area: filter;
+  }
+  
+  .recs {
+    grid-area: recs;
+  }
+  
+  .promo {
+    grid-area: promo;
+  }
+  
+  .place1 {
+    grid-area: place1;
+  }
+
+  .place2 {
+    grid-area: place2;
+  }
+
+  .place3 {
+    grid-area: place3;
+  }
+  
+  .cardcontainer {
+    display: grid;
+    position: relative;
+    grid-area: cardcontainer;
+    grid-column-start: 1;
+    grid-row-start: 3;
+    grid-template-columns: 1fr;
+  }
+  
+  .cardcontainer .card {
+    background-color: cyan;
+  }
+  
+  .card .cardname {
+   grid-area: cardname;
+   background-color: aquamarine;
+  }
+  
+  .card .cardimagge {
+   grid-area: cardimg; 
+   background-color:blue;
+  }
+  
+  .card .type {
+    grid-area: cardtype;
+    background-color: chocolate;
+  }
+  
+  .card .abv {
+    grid-area: abv;
+    background-color: darkgreen;
+  }ß
+  
+  .card .location {
+  grid-area: cardfrom;
+  background-color: red;
+  }
+  
+  .card .descr {
+    grid-area: carddescr;
+    background-color: darkorange;
+  }
+
+
+  div {
+    border: 1px solid black;
+    background-color: purple;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  @media screen and (min-width: 768px) {
+    section {
+      grid-template-columns: repeat(7, 1fr);
+      grid-template-rows: 100px 50px repeat(5, 1fr) 30px;
+      grid-template-areas:        
+        'cardcontainer';
+        
+      background-color: orange;
+      margin: 30px;
+    }
+
+    .cardcontainer {
+        display: grid;
+        grid-area: cardcontainer;
+        grid-column-start: 2;
+        grid-row-start: 2;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        overflow: scroll;
+        scrollbar-color: red orange;
+        scrollbar-width: thin;
+      }
+
+      .card {
+        background-color: cyan;
+        display: grid;
+        grid-template-columns: 1fr;      
+        align-content: stretch;
+        padding: 20px;
+      }
+
+      .card .cardname {
+       /* grid-area: cardname; */
+       background-color: aquamarine;
+       grid-column-start: 1;
+       grid-row-start: 1;
+       grid-column-end: 7;
+       grid-row-start: 1;
+       grid-row-end: 2;
+      }
+      
+      .card .cardimage {
+       /* grid-area: cardimg;  */
+       background-color:blue;
+       grid-column-start: 1;
+       grid-column-end: 6;
+
+       grid-row-start: 2;
+       grid-row-end: 6;
+       grid-auto-columns: max-content;
+       grid-auto-rows: max-content;
+       min-width: 200px;
+      }
+      
+      .card .type {
+        /* grid-area: cardtype; */
+        background-color: chocolate;
+        grid-column-start: 6;
+        grid-column-end: 7;
+
+        grid-row-start: 2;
+        grid-row-end: 3;
+      }
+      
+      .card .abv {
+        /* grid-area: abv; */
+        background-color: darkgreen;
+        grid-column-start: 6;
+        grid-column-end: 7;
+
+        grid-row-start: 3;
+        grid-row-end: 4;
+      }
+      
+      .card .location {
+        /* grid-area: cardfrom; */
+        background-color: red;
+        grid-column-start: 6;
+        grid-column-end: 7;
+        grid-row-start: 4;
+        grid-row-end: 5;
+      }
+      
+      .card .descr {
+        /* grid-area: carddescr; */
+        background-color: darkorange;
+        grid-column-start: 1;
+        grid-column-end: 7;
+        grid-row-start: 6;
+        grid-row-end: 7;
+      }
+    
+  }
+
+  
