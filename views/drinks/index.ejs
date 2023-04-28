@@ -6,25 +6,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/b0bc6568b2.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap" rel="stylesheet">
     <title>BrewVine</title>
     <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
     
 </head>
 <body>
   <%- include('../partials/bvlogo') %>
-  
-<header>Welcome to BrewVine!<br>
-  
-  <p>BrewVine is a user enhanced app designed to catalog, review, and edit adult beverages of your choosing.</p><br>
-  <p>Not a user? That's OK, you can still view and sort the entire catalog by drink type.</p><br>
-  <p>For a more robust experience, login using your Google account, then add to the fridge, or select a beverage to view details, create a review, or edit.</p>
-</header>
-<img src="public/images/Beer-right4.PNG" alt="">
-    <form action="/drinks" method="GET">
-
   <nav>
     <%- include('../partials/_navbar') %>
   </nav>
+  <header>
+  <h1>Welcome to BrewVine!</h1><br>
+  <p>BrewVine is a user enhanced app designed to catalog, review, and edit adult beverages of your choosing.</p><br>
+  <p>For a more robust experience, login using your Google account and be able to add to our fridge and leave a review for a specific drink.</p><br>
+  <p>Not a user? That's OK, you can still view and sort the entire catalog by drink type.</p>
+  
+</header>
+<br>
+
+  
     
 
   <div class="container">    
@@ -32,8 +35,8 @@
     </div>
     <div id="bg-pics-r">
     </div>
-
-    <label for="Type Selector">Sort by Type:</label>
+    <form action ="/drinks" method="GET">
+    <label for="Type Selector"><h4>Sort by Type:</h4></label>
     <select name="type" >
         <option value="All">All</option>
         <option value="Beer">Beer</option>
@@ -41,12 +44,9 @@
         <option value="Spirits">Spirits</option>
         <option value="Other">Other</option>
     </select>
-    <input type="submit" id="type-filter">   
+    <input type="submit" id="type-filter" class="button-2">   
     </form>
-
- 
-
-
+    <br>
     <div class="products">
       <% drinks.forEach((drink)=>{ %>
         <section>

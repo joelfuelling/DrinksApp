@@ -9,6 +9,17 @@ header {
   margin: 35px;
 
 }
+header h1{
+  font-family:'Racing Sans One', cursive;
+    font-size: 44px;
+    color:rgb(135, 6, 6)
+}
+
+header p{
+  font-size: 20px;
+    width: 60%
+  
+}
 .login, .logout {
   display: flex;
   justify-content: right;
@@ -28,8 +39,8 @@ header {
 }
 
 .user-avatar{
-  max-height: 45px;
-  max-width: 45px;
+  max-height: 40px;
+  max-width: 40px;
   position: absolute;
   border-radius: 50%;
   right: 175px;
@@ -76,10 +87,27 @@ input, textarea {
   max-width: 37.5em;
   margin: auto;
   margin-top: 2em;
+    text-align: center;
+    text-overflow: wrap;
+    word-wrap: break-word;
+    white-space: initial;
+    
+    
+}
+
+.new-product {
+  background-color: #F5B8D9;
+  margin-top: 1em;
   text-align: center;
-  text-overflow: wrap;
-  word-wrap: break-word;
-  white-space: initial;   
+  margin-right: 2em;
+}
+
+h2  {
+  margin-top: 3em;
+  text-align: center;
+  font-size: 2.5em;
+  color: #FFC300;
+  text-shadow: .5px .5px  grey;
 }
 
 img {
@@ -99,7 +127,8 @@ p {
 
 .products {
   display: flex;
-  justify-content: space-between;
+  columns: 3;
+  justify-content: center;
   flex-wrap: wrap;
     text-align: center;
     text-overflow: wrap;
@@ -108,6 +137,13 @@ p {
     
     
   }
+
+  .products section{
+    max-width: 160px;
+    min-width: 160px;
+    padding: 20px;
+  }
+
   .products section h3{
     text-align: center;
     text-overflow: wrap;
@@ -157,14 +193,17 @@ p {
   /* Full height */
   height: 130%;
   width: 20vw;
+  width: 20vw;
   /* Center and scale the image nicely */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   z-index: -1;
 }
-header p{
-  width: 50%
+
+.button-2{
+  color: rgb(135, 6, 6);
+  text-shadow: .5px .5px 1px black;
 }
 
 .gradient-footer {
@@ -206,6 +245,11 @@ header p{
     }
     .container{
       width: 95%;
+    }
+    header p{
+      font-size: 16px;
+        
+      
     }
 }
 
