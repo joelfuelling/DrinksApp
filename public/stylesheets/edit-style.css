@@ -124,3 +124,13 @@
  #button-3{
     margin-left: 18%;
  }
+
+ .gradient-footer {
+  height: 65px;
+  background-image: linear-gradient(rgba(169, 132, 9, 0), rgba(169, 132, 9, 1));
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

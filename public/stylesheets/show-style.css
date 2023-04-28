@@ -7,21 +7,41 @@ body{
 }
 
 #bg-pics-l {
-    /* The image used */
-    background-image: url("/images/Wine-left1-tall.jpg");
-    position: fixed;
-    left:0%;
-    top:0%;
-    /* Full height */
-    height: 130%;
-    width: 20vw;
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    z-index: -1;
-  }
-  
+  /* The image used */
+  background-image: url("/images/Wine-left1-tall.jpg");
+  position: fixed;
+  left:0%;
+  top:0%;
+  /* Full height */
+  height: 130%;
+  width: 20vw;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+
+#bg-pics-r {
+  /* The image used */
+  background-image: url("/images/Beer-Right2-Tall.jpg");
+  position: fixed;
+  right:0%;
+  top:0%;
+  /* Full height */
+  height: 130%;
+  width: 25vw;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+#review-user{
+  justify-content: left;
+  display: flex;
+  align-items: center;
+}
   #bg-pics-r {
     /* The image used */
     background-image: url("/images/Beer-Right2-Tall.jpg");

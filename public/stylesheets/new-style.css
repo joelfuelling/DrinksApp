@@ -1,3 +1,4 @@
+
 #bg-pics-l {
     /* The image used */
     background-image: url("/images/Wine-left1-tall.jpg");
@@ -29,37 +30,7 @@
     background-size: cover;
     z-index: -1;
   }
-  #bg-pics-l {
-    /* The image used */
-    background-image: url("/images/Wine-left1-tall.jpg");
-    position: fixed;
-    left:0%;
-    top:0%;
-    /* Full height */
-    height: 130%;
-    width: 20vw;
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    z-index: -1;
-  }
-  
-  #bg-pics-r {
-    /* The image used */
-    background-image: url("/images/Beer-Right2-Tall.jpg");
-    position: fixed;
-    right:0%;
-    top:0%;
-    /* Full height */
-    height: 130%;
-    width: 25vw;
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    z-index: -1;
-  }
+
   body{
     box-sizing: border-box;
 }
@@ -106,6 +77,10 @@
     border-radius: 50%;
     height: 40px;
   }
+
+  /* .container {
+    width: 100%;
+  } */
   #show-container h3{
     display: inline;
     margin-top: 20%;
@@ -155,3 +130,12 @@
  #button-3{
     margin-left: 18%;
  }
+ .gradient-footer {
+  height: 65px;
+  background-image: linear-gradient(rgba(169, 132, 9, 0), rgba(169, 132, 9, 1));
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

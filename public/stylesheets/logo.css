@@ -42,6 +42,7 @@
     left: 50%;
     transform: translateX(-50%);
     display: block;
+    opacity: .15;
   }
 
 }
