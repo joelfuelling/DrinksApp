@@ -1,8 +1,10 @@
 .bvlogo {
-
   position: fixed;
-  z-index: -3;
-  opacity: .35;
-  top: 75px;
-  left: 175px;
+  max-width: 300px;
+  max-height: 300px;
+  opacity: .25;
+  z-index: -1;
+  top: 8%;
+  left: 50%;
+  transform: translateX(-50%);
 }

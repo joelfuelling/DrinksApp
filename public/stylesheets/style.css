@@ -28,25 +28,11 @@ header {
 }
 
 .user-avatar{
-  max-height: 55px;
-  max-width: 55px;
+  max-height: 45px;
+  max-width: 45px;
   position: absolute;
   border-radius: 50%;
   right: 175px;
-}
-
-
-a {
-  text-decoration: none;
-  color:rgb(135, 6, 6);
-  text-shadow: .5px .5px 1px black;
-}
-nav > a:hover {
-  color: blue;
-}
-
-button {
-  box-shadow: 1px 1px 4px ghostwhite;
 }
 
 nav {
@@ -63,6 +49,25 @@ nav {
   align-items: center;
 }
 
+a {
+  text-decoration: none;
+  color:rgb(135, 6, 6);
+}
+nav > a {
+  text-decoration: none;
+  color:rgb(135, 6, 6);
+  text-shadow: .5px .5px 1px black;
+  transition: color .3s;
+}
+nav > a:hover {
+  color: rgb(255, 251, 0);
+  font-size: 21px;
+}
+
+button {
+  box-shadow: 1px 1px 4px ghostwhite;
+}
+
 input, textarea {
   min-width: relative;
 }
@@ -71,44 +76,10 @@ input, textarea {
   max-width: 37.5em;
   margin: auto;
   margin-top: 2em;
-    text-align: center;
-    text-overflow: wrap;
-    word-wrap: break-word;
-    white-space: initial;
-    
-    
-}
-
-.new-product {
-  background-color: #F5B8D9;
-  margin-top: 1em;
   text-align: center;
-  margin-right: 2em;
-}
-
-h2  {
-  margin-top: 3em;
-  text-align: center;
-  font-size: 2.5em;
-  color: #FFC300;
-  text-shadow: .5px .5px  grey;
-}
-
-.card {
-  flex-basis: 20%;
-  text-align: center;
-  padding: .3em;
-  margin: .5em;
-  box-shadow: 1px 1px 2px silver, -1px 1px 2px silver;
-  border-radius: 10px;
-  background-color: #FFF5EC;
-  height: 237px;
-  overflow: scroll;
-}
-
-.card h5 {
-  padding-top: 1em;
-  font-size: 1em;
+  text-overflow: wrap;
+  word-wrap: break-word;
+  white-space: initial;   
 }
 
 img {
@@ -185,7 +156,7 @@ p {
   top:0%;
   /* Full height */
   height: 130%;
-  width: 25vw;
+  width: 20vw;
   /* Center and scale the image nicely */
   background-position: center;
   background-repeat: no-repeat;
@@ -206,13 +177,23 @@ header p{
 }
 
 .back-to-top {
-  border-style: dotted;
+  border-style: solid;
   border-radius: 20%;
-  border-color: rgb(255, 217, 0);
+  border-color: rgb(108, 3, 3);
+  background-color: #c8b507;
   opacity: .90;
   position: fixed;
   bottom: 15px;
   right: -60px;
+  transition: width 1.2s, height 1.2s, background-color .5s, rotate .4s;
+}
+
+.back-to-top:hover {
+  border-color: #ffe601;
+  background-color: #5d0808;
+  width: 125px;
+  height: 68px;
+  rotate: 360deg;
 }
 
 .top-arrow {
