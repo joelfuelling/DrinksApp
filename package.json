@@ -14,7 +14,7 @@
     "passport-google-oauth": "^2.0.0"
   },
   "name": "drinksapp",
-  "description": "ROUGH draft, and I don't know if all the syntax is correct. I googled if 'String' is the right validator for email and it is.",
+  "description": "Personal drink catalog to track favorited beverages, of which the user can review, edit, and delete",
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
@@ -22,5 +22,8 @@
     "start": "node server.js"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "engines": {
+    "node": "18.15.0"
+  }
 }
