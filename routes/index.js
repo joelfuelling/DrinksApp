@@ -18,7 +18,7 @@ router.get('/beervinecallback', passport.authenticate(
     'google',
     {
       successRedirect: '/drinks',
-      failureRedirect: '/drinks'
+      failureRedirect: '/'
     }
   ));
 
