@@ -1,15 +1,26 @@
-
+* {
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
 body {
   margin: 0;
   margin-top: 10vh;
 }
-form {
-  margin-bottom: 10vh;
-}
+
 header {
   text-align: center;
   margin: 35px;
 
+}
+header h1{
+  font-family:'Racing Sans One', cursive;
+    font-size: 44px;
+    color:rgb(135, 6, 6)
+}
+
+header p{
+  font-size: 20px;
+    width: 60%
+  
 }
 .login, .logout {
   display: flex;
@@ -30,13 +41,12 @@ header {
 }
 
 .user-avatar{
-  max-height: 55px;
-  max-width: 55px;
+  max-height: 40px;
+  max-width: 40px;
   position: absolute;
   border-radius: 50%;
   right: 175px;
 }
-
 
 a {
   text-decoration: none;
@@ -65,12 +75,30 @@ nav {
   align-items: center;
 }
 
+a {
+  text-decoration: none;
+  color:rgb(135, 6, 6);
+}
+nav > a {
+  text-decoration: none;
+  color:rgb(135, 6, 6);
+  text-shadow: .5px .5px 1px black;
+  transition: color .3s;
+}
+nav > a:hover {
+  color: rgb(255, 251, 0);
+}
+
+button {
+  box-shadow: 1px 1px 4px ghostwhite;
+}
+
 input, textarea {
   min-width: relative;
 }
 
 .container {
-  max-width: 37.5em;
+  max-width: 35em;
   margin: auto;
   margin-top: 2em;
     text-align: center;
@@ -96,30 +124,13 @@ h2  {
   text-shadow: .5px .5px  grey;
 }
 
-.card {
-  flex-basis: 20%;
-  text-align: center;
-  padding: .3em;
-  margin: .5em;
-  box-shadow: 1px 1px 2px silver, -1px 1px 2px silver;
-  border-radius: 10px;
-  background-color: #FFF5EC;
-  height: 237px;
-  overflow: scroll;
-}
-
-.card h5 {
-  padding-top: 1em;
-  font-size: 1em;
-}
-
 img {
   max-width: 90%;
   max-height: 10vmax;
 }
 
 .card img:hover {
-  box-shadow: 0 0 8px #96DADD;
+  box-shadow: 0 0 8px #8b0101;
 }
 
 
@@ -130,7 +141,8 @@ p {
 
 .products {
   display: flex;
-  justify-content: space-between;
+  columns: 3;
+  justify-content: center;
   flex-wrap: wrap;
     text-align: center;
     text-overflow: wrap;
@@ -139,6 +151,13 @@ p {
     
     
   }
+
+  .products section{
+    max-width: 160px;
+    min-width: 160px;
+    padding: 20px;
+  }
+
   .products section h3{
     text-align: center;
     text-overflow: wrap;
@@ -187,15 +206,18 @@ p {
   top:0%;
   /* Full height */
   height: 130%;
-  width: 25vw;
+  width: 20vw;
+  width: 20vw;
   /* Center and scale the image nicely */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   z-index: -1;
 }
-header p{
-  width: 50%
+
+.button-2{
+  color: rgb(135, 6, 6);
+  text-shadow: .5px .5px 1px black;
 }
 
 .gradient-footer {
@@ -208,13 +230,23 @@ header p{
 }
 
 .back-to-top {
-  border-style: dotted;
+  border-style: solid;
   border-radius: 20%;
-  border-color: rgb(255, 217, 0);
+  border-color: rgb(108, 3, 3);
+  background-color: #c8b507;
   opacity: .90;
   position: fixed;
   bottom: 15px;
   right: -60px;
+  transition: width 1.2s, height 1.2s, background-color .5s, rotate .4s;
+}
+
+.back-to-top:hover {
+  border-color: #ffe601;
+  background-color: #5d0808;
+  width: 125px;
+  height: 68px;
+  rotate: 360deg;
 }
 
 .top-arrow {
@@ -228,16 +260,45 @@ header p{
     .container{
       width: 95%;
     }
+    header p{
+      font-size: 16px;
+        
+      
+    }
 }
 
 
 
-@media only screen and (max-width: 530px) {
+@media only screen and (max-width: 550px) {
   .container{
     margin-top: 6em;
     width: 95%;
   }
   .card {
       flex-basis: 43%;
+  }
+  nav > a {
+    font-size: 16px;
+  }
+  nav > a:hover {
+    color: rgb(255, 251, 0);
+    font-size: 16px;
+  }
+  .user-avatar{
+    max-height: 33px;
+    max-width: 33px;
+    position: absolute;
+    border-radius: 50%;
+    right: 142px;
+  }
+
+  .add-drink {
+    left: 80px;
+  }
+  
+  .logout img {
+    margin-left: 15px;
+    margin-right: 20px;
+    height: 30px;
   }
 }

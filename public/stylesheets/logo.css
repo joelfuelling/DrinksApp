@@ -1,8 +1,48 @@
-.bvlogo {
-
+.bvlogo{
   position: fixed;
-  z-index: -3;
-  opacity: .35;
-  top: 75px;
-  left: 175px;
+  max-width: 300px;
+  max-height: 300px;
+  opacity: .25;
+  z-index: -1;
+  top: 18%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#bvlogo-l{
+  position: fixed;
+  max-width: 200px;
+  max-height: 200px;
+  opacity: .25;
+  z-index: -1;
+  transform: translateX(-50%);
+  top: 38%;
+  left: 30%;
+}
+#bvlogo-r{
+  position: fixed;
+  max-width: 200px;
+  max-height: 200px;
+  opacity: .25;
+  z-index: -1;
+  transform: translateX(-50%);
+  top: 38%;
+  left: 70%;
+}
+@media only screen and (max-width: 800px) {
+  #bvlogo-l {
+    display: none;
+  }
+  #bvlogo-r {
+    position: fixed;
+    max-width: 300px;
+    max-height: 300px;
+    opacity: .25;
+    z-index: -1;
+    top: 18%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    opacity: .15;
+  }
+
 }
