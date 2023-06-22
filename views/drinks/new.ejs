@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/stylesheets/new-style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap" rel="stylesheet">
   <title>Add to Fridge</title>
 </head>
 
@@ -12,14 +16,19 @@
     <nav>
         <%- include('../partials/_navbar') %>
     </nav>
+
+    <div id="bg-pics-l">
+    </div>
+    <div id="bg-pics-r">
+    </div>
     
     <div class="container">
         <h1>Add a drink to the Fridge</h1>
         <form action="/drinks" method="POST">
-            <label for="name">Name:</label>
+            <label class="kappa" for="name">Name:</label>
             <input type="text" name="name">
             <br>
-            <label for="type">Type:</label>
+            <label class="kappa" for="type">Type:</label>
             <select name="type">
                 <option value="Beer">Beer</option>
                 <option value="Wine">Wine</option>
@@ -27,23 +36,24 @@
                 <option value="Other">Other</option>
             </select>
             <br>
-            <label for="img">Image:</label>
+            <label class="kappa" for="img">Image:</label>
             <input type="text" name="img">
             <br>
-            <label for="style">Style:</label>
+            <label class="kappa" for="style">Style:</label>
             <input type="text" name="style">
             <br>
-            <label for="abv">ABV%:</label>
+            <label class="kappa" for="abv">ABV%:</label>
             <input type="number" name="abv" step=".1">
             <br>
-            <label for="location">Location:</label>
+            <label class="kappa" for="location">Location:</label>
             <input type="text" name="location">
             <br>
-            <label for="description">Description:</label><br>
+            <label class="kappa" for="description">Description:</label><br>
             <textarea name="description" rows="4" cols='40'></textarea>
             <br>
-            <input type="submit" value="Add to BrewVine">
+            <input id="button-3" type="submit" class="button-2" value="Add to BrewVine">
         </form>
     </div>
 </body>
+<%- include('../partials/footer') %>
 </html>
